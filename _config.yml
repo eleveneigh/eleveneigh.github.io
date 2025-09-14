@@ -1,17 +1,15 @@
 title: Robin Wu
 description: my personal website
 theme: minima
-author:
-  name: Robin Wu
-  email: lw403@duke.edu
-  github: eleveneigh
-  linkedin: www.linkedin.com/in/leyan-wu-36398b31a
+
+author: Robin Wu   
 
 header_pages:
   - about.md
   - projects.md
-  
+
 minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
-    - { platform: linkedin, user_url: "https://www.linkedin.com/in/<your-id>/" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
+    - { platform: email,   user_url: "mailto:lw403@duke.edu" }  # 可选
