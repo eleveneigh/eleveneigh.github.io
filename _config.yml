@@ -2,11 +2,11 @@ title: Robin Wu
 description: my personal website
 theme: minima
 
-author: Robin Wu   
-
 header_pages:
   - about.md
   - projects.md
+
+author: Robin Wu   
 
 minima:
   social_links:
