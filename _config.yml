@@ -1,3 +1,13 @@
 title: Robin Wu
 description: my personal website
-theme: minima  
+theme: minima
+author:
+  name: Robin Wu
+  email: your@email.com
+  github: eleveneigh
+  linkedin: your-link
+
+header_pages:
+  - about.md
+  - projects.md
+  - contact.md
