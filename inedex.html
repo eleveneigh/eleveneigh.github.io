@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>eleveneigh · Personal Site</title>
+  <meta name="description" content="my personal website" />
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root { --maxw: 900px; }
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto, Helvetica, Arial, sans-serif; margin:0; line-height:1.6; }
+    header { padding: 2.5rem 1rem; border-bottom: 1px solid #eee; }
+    main { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1rem; }
+    nav a { margin-right: 1rem; text-decoration: none; color:#333; }
+    h1 { margin: 0 0 .25rem; font-size: 2rem; }
+    .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { border:1px solid #eee; border-radius:14px; padding:1rem; }
+    footer { border-top:1px solid #eee; padding:1.5rem 1rem; text-align:center; color:#666; }
+  </style>
+</head>
+<body>
+  <header>
+    <main>
+      <h1>Hi, I’m eleveneigh</h1>
+      <p>欢迎来到我的个人网站 👋</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </main>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>一句话自我介绍，放你的研究/兴趣/学校/实习等。</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>项目 A</h3>
+          <p>做了什么，用到了什么技术，取得了什么结果。</p>
+          <p><a href="#">GitHub</a> · <a href="#">Demo</a></p>
+        </article>
+        <article class="card">
+          <h3>项目 B</h3>
+          <p>一句话亮点 + 链接。</p>
+          <p><a href="#">论文/海报</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: you@example.com · <a href="https://github.com/eleveneigh">GitHub</a> · <a href="#">LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> eleveneigh · Built with GitHub Pages
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
