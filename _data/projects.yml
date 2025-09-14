@@ -1,0 +1,7 @@
+- name: MusicCollage (Therapeutic Collage System)
+  brief: Web-based AI-assisted collage with YOLOv8 + Qwen agent; supports reflective creation workflow.
+  tags: [HCI, Web, YOLOv8, Qwen]
+  demo: https://example.com/musixcollage
+  code: https://github.com/eleveneigh/musiccollage
+  paper: https://example.com/poster.pdf
+
