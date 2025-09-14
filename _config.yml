@@ -3,9 +3,9 @@ description: my personal website
 theme: minima
 author:
   name: Robin Wu
-  email: your@email.com
+  email: lw403@duke.edu
   github: eleveneigh
-  linkedin: your-link
+  linkedin: www.linkedin.com/in/leyan-wu-36398b31a
 
 header_pages:
   - about.md
