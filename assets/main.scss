@@ -3,13 +3,17 @@
 
 @import "minima";
 
-/* 浅色模式（白天 / 系统浅色） */
+/* ===========================
+   浅色模式（白天 / 系统浅色）
+   =========================== */
 @media (prefers-color-scheme: light) {
   body {
     background-color: #fdfcf7;   /* 米白，接近纸张 */
     color: #222;                 /* 深灰文字 */
   }
-  a { color: #0b57d0; }          /* 稳重深蓝链接 */
+  a { 
+    color: #0b57d0;              /* 稳重深蓝链接 */
+  }
 
   .card {
     background: #ffffff;
@@ -18,18 +22,22 @@
     padding: 14px;
   }
 
-  header, footer {
+  .site-header, .site-footer {
     background: #efefef;         /* 柔和灰色页眉/页脚 */
   }
 }
 
-/* 深色模式（夜晚 / 系统深色） */
+/* ===========================
+   深色模式（夜晚 / 系统深色）
+   =========================== */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1e1e1e;   /* 深灰，不是纯黑 */
     color: #ddd;                 /* 浅灰文字 */
   }
-  a { color: #80b3ff; }          /* 柔和亮蓝链接 */
+  a { 
+    color: #80b3ff;              /* 柔和亮蓝链接 */
+  }
 
   .card {
     background: #2b2b2b;
@@ -38,11 +46,36 @@
     padding: 14px;
   }
 
-  header, footer {
+  .site-header, .site-footer {
     background: #2a2a2a;
   }
 }
+
+/* ===========================
+   全局额外样式
+   =========================== */
+
+/* 隐藏 minima 自带的主题切换按钮 */
 button.theme-toggle,
 a.theme-toggle {
   display: none !important;
+}
+
+/* 卡片阴影与过渡 */
+.card {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 页眉页脚文字居中 & 内边距 */
+.site-header, .site-footer {
+  text-align: center;
+  padding: 1rem 0;
 }
