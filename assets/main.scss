@@ -82,8 +82,10 @@ a.theme-toggle {
 /* 链接在浅/深色下都保持可读 */
 a, a:visited { color: #0b57d0; }
 @media (prefers-color-scheme: dark) {
-  a, a:visited { color: #cfe1ff; }    /* 亮一点，保证对比度 */
-  .posts li a { color: #cfe1ff; }     /* 专门覆盖文章列表标题 */
-  .posts .meta { color: #9fb2c8; }    /* 日期/副文本也提亮 */
-  .card h3 { color: #e8ecf4; }        /* 卡片标题提亮 */
+  .posts li a {
+    color: #cfe1ff !important;   /* bright link color */
+  }
+  .posts .meta {
+    color: #9fb2c8 !important;   /* lighter gray for date text */
+  }
 }
