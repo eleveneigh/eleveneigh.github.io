@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-seo-tag
+
 title: Robin Wu
 description: my personal website
 theme: minima
@@ -9,6 +12,7 @@ header_pages:
 author: Robin Wu   
 
 minima:
+  skin: auto
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
