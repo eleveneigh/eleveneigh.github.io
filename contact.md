@@ -10,20 +10,28 @@ I'm always excited to connect with fellow researchers, developers, and creative 
 
 ## Let's Connect
 
-### 📧 Email
-**lw403@duke.edu**
-
-For academic inquiries, research collaboration, or general questions.
-
-### 💼 LinkedIn
-**[linkedin.com/in/leyan-wu-36398b31a](https://www.linkedin.com/in/leyan-wu-36398b31a)**
-
-Connect with me professionally and see my career journey.
-
-### 🐙 GitHub
-**[github.com/eleveneigh](https://github.com/eleveneigh)**
-
-Check out my code, projects, and contributions to open source.
+<div class="contact-cards">
+  <div class="contact-card">
+    <h3>📧 Email</h3>
+    <p><strong>lw403@duke.edu</strong></p>
+    <p>For academic inquiries, research collaboration, or general questions.</p>
+    <a href="mailto:lw403@duke.edu">Send Email →</a>
+  </div>
+  
+  <div class="contact-card">
+    <h3>💼 LinkedIn</h3>
+    <p><strong>Professional Network</strong></p>
+    <p>Connect with me professionally and see my career journey.</p>
+    <a href="https://www.linkedin.com/in/leyan-wu-36398b31a" target="_blank">Connect →</a>
+  </div>
+  
+  <div class="contact-card">
+    <h3>🐙 GitHub</h3>
+    <p><strong>Code & Projects</strong></p>
+    <p>Check out my code, projects, and contributions to open source.</p>
+    <a href="https://github.com/eleveneigh" target="_blank">View Profile →</a>
+  </div>
+</div>
 
 ---
 
@@ -54,4 +62,4 @@ I typically respond to emails within **24-48 hours**. For urgent matters, feel f
 
 ---
 
-*Looking forward to hearing from you! 🚀*
+*Looking forward to hearing from you! 

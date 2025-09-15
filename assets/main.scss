@@ -3,89 +3,441 @@
 
 @import "minima";
 
-/* ===========================
-   浅色模式（白天 / 系统浅色）
-   =========================== */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #fdfcf7;   /* 米白，接近纸张 */
-    color: #222;                 /* 深灰文字 */
-  }
-  a { 
-    color: #0b57d0;              /* 稳重深蓝链接 */
-  }
-
-  .card {
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 18px;
-    padding: 14px;
-  }
-
-  .site-header, .site-footer {
-    background: #efefef;         /* 柔和灰色页眉/页脚 */
-  }
+/* 现代化设计系统 */
+:root { 
+  --maxw: 1200px; 
+  --radius: 16px; 
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-alt: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===========================
-   深色模式（夜晚 / 系统深色）
-   =========================== */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1e1e1e;   /* 深灰，不是纯黑 */
-    color: #ddd;                 /* 浅灰文字 */
-  }
-  a { 
-    color: #80b3ff;              /* 柔和亮蓝链接 */
-  }
-
-  .card {
-    background: #2b2b2b;
-    border: 1px solid #444;
-    border-radius: 18px;
-    padding: 14px;
-  }
-
-  .site-header, .site-footer {
-    background: #2a2a2a;
-  }
+/* 全局样式 - 强制覆盖 */
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  line-height: 1.6 !important;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+  min-height: 100vh !important;
+  color: #374151 !important;
 }
 
-/* ===========================
-   全局额外样式
-   =========================== */
-
-/* 隐藏 minima 自带的主题切换按钮 */
-button.theme-toggle,
-a.theme-toggle {
-  display: none !important;
+.page-content { 
+  padding-top: 0 !important; 
+  background: transparent !important;
 }
 
-/* 卡片阴影与过渡 */
-.card {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+/* 覆盖 Minima 的默认样式 */
+.site-header {
+  background: transparent !important;
+  border-bottom: none !important;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.site-footer {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: none !important;
+  margin-top: 4rem !important;
+  padding: 2rem 0 !important;
+  text-align: center !important;
 }
 
-/* 页眉页脚文字居中 & 内边距 */
-.site-header, .site-footer {
+/* 页面容器 */
+.wrapper {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 页面标题 */
+.page-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
-  padding: 1rem 0;
+  margin: 3rem 0 2rem;
+  color: #1f2937;
+  position: relative;
 }
-/* 链接在浅/深色下都保持可读 */
-a, a:visited { color: #0b57d0; }
+
+.page-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+/* 内容区域 - 强制覆盖 */
+.post-content, .page-content {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  margin-bottom: 2rem !important;
+}
+
+/* 覆盖 Minima 的页面布局 */
+.wrapper {
+  max-width: var(--maxw) !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+}
+
+/* 覆盖页面标题样式 */
+.page-heading, .post-title {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin: 3rem 0 2rem !important;
+  color: #1f2937 !important;
+  position: relative !important;
+}
+
+.page-heading::after, .post-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -0.5rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 60px !important;
+  height: 4px !important;
+  background: var(--gradient) !important;
+  border-radius: 2px !important;
+}
+
+/* 段落样式 - 强制覆盖 */
+.post-content p, .page-content p {
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  color: #374151 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 标题样式 - 强制覆盖 */
+.post-content h1, .page-content h1 {
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin: 2rem 0 1rem !important;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.post-content h2, .page-content h2 {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin: 1.5rem 0 1rem !important;
+  position: relative !important;
+  padding-left: 1rem !important;
+}
+
+.post-content h2::before, .page-content h2::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 4px !important;
+  height: 1.5rem !important;
+  background: var(--gradient) !important;
+  border-radius: 2px !important;
+}
+
+.post-content h3, .page-content h3 {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin: 1.2rem 0 0.8rem !important;
+}
+
+/* 列表样式 */
+.post-content ul, .page-content ul,
+.post-content ol, .page-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-content li, .page-content li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* 链接样式 - 强制覆盖 */
+.post-content a, .page-content a {
+  color: #667eea !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: var(--transition) !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.post-content a:hover, .page-content a:hover {
+  color: #5a67d8 !important;
+  border-bottom-color: #667eea !important;
+}
+
+/* 代码样式 */
+.post-content code, .page-content code {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.post-content pre, .page-content pre {
+  background: #1f2937;
+  color: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow);
+}
+
+.post-content pre code, .page-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* 引用样式 */
+.post-content blockquote, .page-content blockquote {
+  border-left: 4px solid #667eea;
+  background: rgba(102, 126, 234, 0.05);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* 表格样式 */
+.post-content table, .page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.post-content th, .page-content th,
+.post-content td, .page-content td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.post-content th, .page-content th {
+  background: var(--gradient);
+  color: white;
+  font-weight: 600;
+}
+
+/* 深色模式 - 强制覆盖 */
 @media (prefers-color-scheme: dark) {
-  .posts li a {
-    color: #cfe1ff !important;   /* bright link color */
+  body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    color: #f1f5f9 !important;
   }
-  .posts .meta {
-    color: #9fb2c8 !important;   /* lighter gray for date text */
+  
+  .post-content, .page-content {
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-color: rgba(71, 85, 105, 0.3) !important;
+    color: #f1f5f9 !important;
+  }
+  
+  .page-heading, .post-title {
+    color: #f1f5f9 !important;
+  }
+  
+  .post-content p, .page-content p {
+    color: #d1d5db !important;
+  }
+  
+  .post-content h1, .page-content h1,
+  .post-content h2, .page-content h2,
+  .post-content h3, .page-content h3 {
+    color: #f1f5f9 !important;
+  }
+  
+  .post-content li, .page-content li {
+    color: #d1d5db !important;
+  }
+  
+  .post-content a, .page-content a {
+    color: #93c5fd !important;
+  }
+  
+  .post-content a:hover, .page-content a:hover {
+    color: #60a5fa !important;
+  }
+  
+  .post-content code, .page-content code {
+    background: rgba(102, 126, 234, 0.2) !important;
+    color: #93c5fd !important;
+  }
+  
+  .post-content blockquote, .page-content blockquote {
+    background: rgba(102, 126, 234, 0.1) !important;
+    color: #cbd5e1 !important;
+  }
+  
+  .post-content table, .page-content table {
+    background: rgba(30, 41, 59, 0.8) !important;
+  }
+  
+  .post-content th, .page-content th,
+  .post-content td, .page-content td {
+    border-bottom-color: rgba(71, 85, 105, 0.3) !important;
+  }
+  
+  .site-footer {
+    background: rgba(30, 41, 59, 0.5) !important;
+    color: #cbd5e1 !important;
+  }
+}
+
+/* 摄影作品展示 */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.photo-item {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  background: white;
+}
+
+.photo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+.photo-caption {
+  padding: 1rem;
+  background: white;
+}
+
+.photo-caption h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.photo-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* 联系信息卡片 */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.contact-card a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-card a:hover {
+  color: #5a67d8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .page-heading {
+    font-size: 2rem;
+  }
+  
+  .post-content, .page-content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .post-content h1, .page-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .post-content h2, .page-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .post-content h3, .page-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-cards {
+    grid-template-columns: 1fr;
   }
 }

@@ -19,7 +19,42 @@ Photography is one of my greatest passions. I love capturing moments that tell s
 - **Experimental**: Playing with light, composition, and creative techniques
 
 ### Featured Work
-*[Here you can add your favorite photos - I'll help you set up a gallery once you have the images ready]*
+
+<div class="photo-gallery">
+  <!-- 示例：当你准备好照片后，可以这样添加 -->
+  <!-- 
+  <div class="photo-item">
+    <img src="/assets/images/photography/street-life.jpg" alt="Street Photography">
+    <div class="photo-caption">
+      <h4>Urban Stories</h4>
+      <p>Capturing candid moments in city life, exploring the human experience in urban environments.</p>
+    </div>
+  </div>
+  
+  <div class="photo-item">
+    <img src="/assets/images/photography/nature-light.jpg" alt="Nature Photography">
+    <div class="photo-caption">
+      <h4>Natural Light</h4>
+      <p>Playing with natural lighting and composition to create mood and atmosphere.</p>
+    </div>
+  </div>
+  
+  <div class="photo-item">
+    <img src="/assets/images/photography/portrait-study.jpg" alt="Portrait Photography">
+    <div class="photo-caption">
+      <h4>Human Expression</h4>
+      <p>Exploring emotion and personality through portrait photography.</p>
+    </div>
+  </div>
+  -->
+  
+  <div class="photo-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; text-align: center; min-height: 250px;">
+    <div>
+      <h4 style="color: white; margin: 0 0 1rem;">📸 Photography Gallery</h4>
+      <p style="color: rgba(255,255,255,0.9); margin: 0;">Add your favorite photos here!<br>Create an <code>assets/images/photography/</code> folder<br>and upload your images.</p>
+    </div>
+  </div>
+</div>
 
 ---
 
