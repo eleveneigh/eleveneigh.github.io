@@ -7,13 +7,14 @@ theme: minima
 
 header_pages:
   - about.md
-  - projects.md
+  - project.md
+  - interests.md
+  - contact.md
 
 author: Robin Wu   
 
 minima:
-  skin: auto
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
-    - { platform: email,   user_url: "mailto:lw403@duke.edu" }  # 可选
+    - { platform: email,   user_url: "mailto:lw403@duke.edu" }

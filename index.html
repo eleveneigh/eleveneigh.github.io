@@ -38,7 +38,11 @@ body {
   background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em;
 }
 .hero p.lead { 
-  font-size: 1.25rem; color: #64748b; margin: 0 0 2rem; max-width: 600px; margin-left: auto; margin-right: auto;
+  font-size: 1.25rem; color: #475569; margin: 0 0 1rem; max-width: 600px; margin-left: auto; margin-right: auto;
+}
+.hero p.subtitle {
+  font-size: 1rem; color: #6b7280; margin: 0 0 2rem; max-width: 600px; margin-left: auto; margin-right: auto;
+  font-weight: 500; letter-spacing: 0.5px;
 }
 .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .actions a { 
@@ -64,7 +68,7 @@ body {
 .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient); }
 .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 .card h3 { margin: 0 0 1rem; font-size: 1.5rem; font-weight: 600; color: #1f2937; }
-.meta { font-size: 1rem; color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6; }
+.meta { font-size: 1rem; color: #4b5563; margin-bottom: 1.5rem; line-height: 1.6; }
 .tags { margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tags span { display: inline-block; background: rgba(102, 126, 234, 0.1); color: #667eea; border-radius: 20px; padding: 0.25rem 0.75rem; font-size: 0.875rem; font-weight: 500; border: 1px solid rgba(102, 126, 234, 0.2); }
 .card .links { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -77,18 +81,52 @@ body {
 .posts li:hover { transform: translateX(8px); box-shadow: var(--shadow-lg); }
 .posts li a { font-size: 1.1rem; font-weight: 500; color: #1f2937; text-decoration: none; transition: var(--transition); }
 .posts li a:hover { color: #667eea; }
-.posts .meta { color: #9ca3af; font-size: 0.9rem; margin-top: 0.5rem; }
+.posts .meta { color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
 
 /* 页脚 */
 footer.site-footer { margin-top: 4rem; padding: 2rem 0; text-align: center; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); }
 
 /* 深色模式（跟随系统） */
 @media (prefers-color-scheme: dark) {
-  body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-  .card { background: rgba(30, 41, 59, 0.8); border-color: rgba(71, 85, 105, 0.3); }
-  .meta, .tags, .actions a { color: #cbd5e1; }
+  body { 
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+    color: #f1f5f9;
+  }
+  .card { 
+    background: rgba(30, 41, 59, 0.9); 
+    border-color: rgba(71, 85, 105, 0.3); 
+    color: #f1f5f9;
+  }
+  .card h3 { color: #f1f5f9; }
+  .meta { color: #d1d5db; }
+  .hero p.subtitle { color: #9ca3af; }
+  .tags span { 
+    background: rgba(102, 126, 234, 0.2); 
+    color: #93c5fd; 
+    border-color: rgba(102, 126, 234, 0.3); 
+  }
+  .actions a { 
+    background: rgba(255, 255, 255, 0.1); 
+    color: #f1f5f9; 
+    border-color: rgba(255, 255, 255, 0.2); 
+  }
+  .actions a:hover { 
+    background: var(--gradient); 
+    color: white; 
+  }
   .section h2 { color: #f1f5f9; }
-  .posts li { background: rgba(30, 41, 59, 0.8); border-color: rgba(71, 85, 105, 0.3); }
+  .posts li { 
+    background: rgba(30, 41, 59, 0.9); 
+    border-color: rgba(71, 85, 105, 0.3); 
+    color: #f1f5f9;
+  }
+  .posts li a { color: #93c5fd; }
+  .posts li a:hover { color: #60a5fa; }
+  .posts .meta { color: #a1a1aa; }
+  footer.site-footer { 
+    background: rgba(30, 41, 59, 0.5); 
+    color: #cbd5e1; 
+  }
 }
   
 /* 响应式 & 动画 */
@@ -105,11 +143,13 @@ footer.site-footer { margin-top: 4rem; padding: 2rem 0; text-align: center; back
 </style>
 
 <div class="hero">
-  <h1>{{ site.title | default: "Portfolio" }}</h1>
-  <p class="lead">{{ site.description }}</p>
+  <h1>Hi, I'm Robin</h1>
+  <p class="lead">Creating technology that cares about human emotions and mental well-being</p>
+  <p class="subtitle">CS & Applied Math Student | HCI Researcher | AI-Assisted Creativity Enthusiast</p>
   <div class="actions">
-    <a href="/projects">All Projects →</a>
-    <a href="/about">About</a>
+    <a href="/projects">View My Work →</a>
+    <a href="/interests">Photography & More</a>
+    <a href="/contact">Get In Touch</a>
   </div>
 </div>
 
