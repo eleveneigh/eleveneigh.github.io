@@ -1,0 +1,44 @@
+---
+---
+
+@import "minima";
+
+/* 浅色模式（白天 / 系统浅色） */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fdfcf7;   /* 米白，接近纸张 */
+    color: #222;                 /* 深灰文字 */
+  }
+  a { color: #0b57d0; }          /* 稳重深蓝链接 */
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  header, footer {
+    background: #efefef;         /* 柔和灰色页眉/页脚 */
+  }
+}
+
+/* 深色模式（夜晚 / 系统深色） */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;   /* 深灰，不是纯黑 */
+    color: #ddd;                 /* 浅灰文字 */
+  }
+  a { color: #80b3ff; }          /* 柔和亮蓝链接 */
+
+  .card {
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  header, footer {
+    background: #2a2a2a;
+  }
+}
