@@ -92,7 +92,9 @@ permalink: /contact/
 
 .contact-image img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
+  object-position: center bottom;
   border: 1px solid var(--border);
 }
 
