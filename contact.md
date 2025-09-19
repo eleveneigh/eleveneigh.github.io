@@ -4,8 +4,6 @@ title: Contact
 permalink: /contact/
 ---
 
-# Contact
-
 <div class="contact-layout">
   <div class="contact-info">
     <p>Interested in collaborating on HCI research, AI-assisted creativity, or technology for mental well-being? I'd love to hear from you.</p>
