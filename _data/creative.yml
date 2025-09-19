@@ -1,0 +1,37 @@
+photography:
+  - title: "Urban Stories"
+    description: "Street photography capturing candid moments in city life"
+    image: "/assets/images/creative/street-1.jpg"
+    category: "street"
+    
+  - title: "Natural Light"
+    description: "Playing with natural lighting and composition"
+    image: "/assets/images/creative/nature-1.jpg"
+    category: "nature"
+    
+  - title: "Human Expression"
+    description: "Portrait studies exploring emotion and personality"
+    image: "/assets/images/creative/portrait-1.jpg"
+    category: "portrait"
+
+design:
+  - title: "Mindful UI Concept"
+    description: "Interface design for mental health applications"
+    image: "/assets/images/creative/ui-concept-1.jpg"
+    tools: ["Figma", "Sketch"]
+    
+  - title: "Generative Art Series"
+    description: "Code-based visual explorations using Processing"
+    image: "/assets/images/creative/generative-1.jpg"
+    tools: ["Processing", "p5.js"]
+
+music:
+  - title: "Ambient Soundscapes"
+    description: "Therapeutic audio compositions for relaxation"
+    audio: "/assets/audio/ambient-1.mp3"
+    tools: ["Ableton Live", "Max/MSP"]
+    
+  - title: "Interactive Sound Design"
+    description: "Responsive audio for user interface interactions"
+    demo: "https://example.com/interactive-sound"
+    tools: ["Web Audio API", "Tone.js"]

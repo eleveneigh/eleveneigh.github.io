@@ -5,21 +5,18 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+# About
 
-I'm a junior majoring in **Computer Science** and **Applied Mathematics** at Duke Kunshan University. My research interests lie at the intersection of Human-Computer Interaction (HCI), affective computing, and AI-assisted creativity.
+I'm a CS & Applied Mathematics student at Duke Kunshan University, researching at the intersection of **Human-Computer Interaction**, **affective computing**, and **AI-assisted creativity**.
 
 ## Research Focus
 
-I am especially curious about how **music**, **visual stimuli**, and **interactive design** can contribute to emotional regulation and mental well-being. My work explores the therapeutic potential of technology in supporting mental health and emotional well-being.
+My work explores how technology can support emotional well-being and mental health through:
 
-## Future Goals
+- **Therapeutic AI systems** that understand and respond to human emotions
+- **AI-assisted creative tools** for reflective art-making processes
+- **Interactive design** for mental health applications
 
-After graduation, I hope to pursue a **PhD** in this area and continue building human-centered technologies that care. I'm passionate about creating technology that not only solves problems but also enhances human emotional experiences and mental health.
+## Goals
 
-## Interests
-
-- 🎵 **Music & Technology**: Exploring how music can be integrated with AI for therapeutic purposes
-- 🎨 **Interactive Design**: Creating engaging and meaningful user experiences
-- 🧠 **Affective Computing**: Understanding and responding to human emotions through technology
-- 💡 **AI-Assisted Creativity**: Using artificial intelligence to enhance human creative processes
+I'm working toward a PhD to continue developing human-centered technologies that care about emotional experiences and mental well-being.

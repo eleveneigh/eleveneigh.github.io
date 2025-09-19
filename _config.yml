@@ -2,13 +2,13 @@ plugins:
   - jekyll-seo-tag
 
 title: Robin Wu
-description: my personal website
+description: HCI Researcher | AI-Assisted Creativity
 theme: minima
 
 header_pages:
   - about.md
   - project.md
-  - interests.md
+  - creative.md
   - contact.md
 
 author: Robin Wu   
@@ -17,4 +17,4 @@ minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
-    - { platform: email,   user_url: "mailto:lw403@duke.edu" }
+    - { platform: email,   user_url: "mailto:robinwu328@gmail.com" }
