@@ -12,63 +12,81 @@ Beyond research, I explore creativity through various mediums that inform my und
 
 {% assign zines = site.data.creative.zines | default: [] %}
 {% if zines.size > 0 %}
-  <div class="zine-scroll-hint">
-    <p>← Scroll horizontally to browse →</p>
-  </div>
   {% for zine in zines %}
-  <div class="zine-full-width">
-    <div class="zine-scroll-horizontal">
-      <!-- 封面页 -->
-      <div class="zine-slide cover-slide">
-        <div class="slide-content">
-          <h1>{{ zine.title }}</h1>
-          <p>{{ zine.description }}</p>
-          <div class="slide-meta">{{ zine.year }} • {{ zine.category }}</div>
+  <div class="zine-container">
+    <div class="zine-header">
+      <h3>{{ zine.title }}</h3>
+      <p>{{ zine.description }}</p>
+      <div class="zine-meta">{{ zine.year }} • {{ zine.category }}</div>
+    </div>
+    
+    <div class="zine-viewer">
+      <!-- PDF嵌入选项 -->
+      <div class="pdf-viewer-container">
+        <iframe src="{{ zine.pdf }}#toolbar=0&navpanes=0&scrollbar=0" 
+                class="pdf-iframe" 
+                frameborder="0">
+        </iframe>
+        <div class="pdf-fallback">
+          <p>Your browser doesn't support PDF embedding. <a href="{{ zine.pdf }}" target="_blank">View PDF in new tab →</a></p>
         </div>
       </div>
       
-      <!-- 内容页1 -->
-      <div class="zine-slide">
-        <div class="slide-content">
-          <h2>About This Zine</h2>
-          <p>Fragment of Life is a visual exploration of moments and memories, capturing the essence of everyday experiences through photography and storytelling.</p>
-          <p>This project represents a journey through different perspectives, finding beauty in the ordinary and meaning in the fleeting.</p>
-        </div>
+      <!-- 替代方案：横向滚动页面 -->
+      <div class="zine-scroll-hint">
+        <p>← Scroll to browse pages →</p>
       </div>
       
-      <!-- 内容页2 -->
-      <div class="zine-slide">
-        <div class="slide-content">
-          <h2>Process & Inspiration</h2>
-          <p>Created as a course project, this zine combines photographic storytelling with thoughtful design to create an immersive reading experience.</p>
-          <p>Each page tells a story, each image captures a moment, and together they form a complete narrative of life's fragments.</p>
-        </div>
-      </div>
-      
-      <!-- 内容页3 -->
-      <div class="zine-slide">
-        <div class="slide-content">
-          <h2>Visual Storytelling</h2>
-          <p>The zine explores themes of memory, time, and human connection through carefully curated imagery and thoughtful layout design.</p>
-          <p>Each spread invites the reader to pause and reflect on the beauty found in everyday moments.</p>
-        </div>
-      </div>
-      
-      <!-- 内容页4 -->
-      <div class="zine-slide">
-        <div class="slide-content">
-          <h2>Reflection</h2>
-          <p>Through this project, I discovered how visual narratives can capture emotions and experiences that words alone cannot express.</p>
-          <p>Fragment of Life serves as both a creative expression and a meditation on the fleeting nature of our most precious moments.</p>
-        </div>
-      </div>
-      
-      <!-- 结束页 -->
-      <div class="zine-slide end-slide">
-        <div class="slide-content">
-          <h2>View Complete Work</h2>
-          <p>Experience the full visual journey</p>
-          <a href="{{ zine.pdf }}" target="_blank" class="download-btn">Download PDF →</a>
+      <div class="zine-full-width">
+        <div class="zine-scroll-horizontal">
+          <!-- 封面页 -->
+          <div class="zine-slide cover-slide">
+            <div class="slide-content">
+              <h1>{{ zine.title }}</h1>
+              <p>{{ zine.description }}</p>
+              <div class="slide-meta">{{ zine.year }} • {{ zine.category }}</div>
+            </div>
+          </div>
+          
+          <!-- 示例页面 - 这里可以替换为实际的PDF页面图片 -->
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <div class="page-placeholder">
+                <h3>Page 1</h3>
+                <p>Upload page images from your PDF to showcase the actual content</p>
+                <small>Convert PDF pages to images and add them here</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <div class="page-placeholder">
+                <h3>Page 2</h3>
+                <p>Each page can display your actual zine content</p>
+                <small>Add real page images for full experience</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <div class="page-placeholder">
+                <h3>Page 3</h3>
+                <p>Visual storytelling and photography</p>
+                <small>Showcase your creative work</small>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 下载页 -->
+          <div class="zine-slide end-slide">
+            <div class="slide-content">
+              <h2>View Complete Work</h2>
+              <p>Experience the full visual journey</p>
+              <a href="{{ zine.pdf }}" target="_blank" class="download-btn">Download PDF →</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -292,6 +310,68 @@ Visual storytelling through different perspectives and techniques.
   }
 }
 
+/* Zine容器 */
+.zine-container {
+  margin-bottom: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.zine-header {
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-bottom: 1px solid var(--border);
+}
+
+.zine-header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.zine-header p {
+  margin: 0 0 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.zine-meta {
+  font-size: 0.9rem;
+  color: var(--text-accent);
+}
+
+/* PDF嵌入 */
+.pdf-viewer-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  background: #f5f5f5;
+  border-bottom: 1px solid var(--border);
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-fallback {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2rem;
+}
+
+.pdf-iframe:not([src]) + .pdf-fallback {
+  display: block;
+}
+
 /* 滚动提示 */
 .zine-scroll-hint {
   text-align: center;
@@ -299,7 +379,7 @@ Visual storytelling through different perspectives and techniques.
   background: rgba(102, 126, 234, 0.1);
   border: 1px solid rgba(102, 126, 234, 0.2);
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .zine-scroll-hint p {
@@ -307,6 +387,34 @@ Visual storytelling through different perspectives and techniques.
   color: var(--text-accent);
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* 页面占位符 */
+.page-slide {
+  background: white;
+}
+
+.page-placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.page-placeholder h3 {
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.page-placeholder p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.page-placeholder small {
+  font-style: italic;
+  color: var(--text-accent);
 }
 
 /* 全屏横向滚动Zine */
