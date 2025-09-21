@@ -12,6 +12,9 @@ Beyond research, I explore creativity through various mediums that inform my und
 
 {% assign zines = site.data.creative.zines | default: [] %}
 {% if zines.size > 0 %}
+  <div class="zine-scroll-hint">
+    <p>← Scroll horizontally to browse →</p>
+  </div>
   {% for zine in zines %}
   <div class="zine-full-width">
     <div class="zine-scroll-horizontal">
@@ -289,6 +292,23 @@ Visual storytelling through different perspectives and techniques.
   }
 }
 
+/* 滚动提示 */
+.zine-scroll-hint {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.zine-scroll-hint p {
+  margin: 0;
+  color: var(--text-accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 /* 全屏横向滚动Zine */
 .zine-full-width {
   width: 100vw;
@@ -299,6 +319,8 @@ Visual storytelling through different perspectives and techniques.
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--text-accent) transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .zine-full-width::-webkit-scrollbar {
@@ -323,6 +345,7 @@ Visual storytelling through different perspectives and techniques.
   width: max-content;
   height: 80vh;
   min-height: 500px;
+  position: relative;
 }
 
 .zine-slide {
