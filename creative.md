@@ -28,7 +28,7 @@ Beyond research, I explore creativity through various mediums that inform my und
                 frameborder="0">
         </iframe>
         <div class="pdf-fallback">
-          <p>Your browser doesn't support PDF embedding. <a href="{{ zine.pdf }}" target="_blank">View PDF in new tab →</a></p>
+          <p>Your browser doesn't support PDF embedding. Please try a different browser to view the content.</p>
         </div>
       </div>
       
@@ -79,12 +79,12 @@ Beyond research, I explore creativity through various mediums that inform my und
             </div>
           </div>
           
-          <!-- 下载页 -->
+          <!-- 结束页 -->
           <div class="zine-slide end-slide">
             <div class="slide-content">
-              <h2>View Complete Work</h2>
-              <p>Experience the full visual journey</p>
-              <a href="{{ zine.pdf }}" target="_blank" class="download-btn">Download PDF →</a>
+              <h2>End of Journey</h2>
+              <p>Thank you for experiencing Fragment of Life</p>
+              <div class="end-message">A visual exploration of moments and memories</div>
             </div>
           </div>
         </div>
@@ -522,23 +522,12 @@ Visual storytelling through different perspectives and techniques.
   margin-top: 2rem;
 }
 
-.download-btn {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 500;
+.end-message {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-weight: 400;
   margin-top: 2rem;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.download-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
+  font-style: italic;
 }
 
 .zine-placeholder {
