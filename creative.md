@@ -41,30 +41,61 @@ Visual storytelling through different perspectives and techniques.
 
 ## Zines
 
-<div class="book-showcase">
-  {% assign books = site.data.creative.zines | default: [] %}
-  {% if books.size > 0 %}
-    <div class="book-scroll">
-      {% for book in books %}
-      <div class="book-item">
-        <div class="book-cover">
-          <div class="book-preview">
-            <h3>{{ book.title }}</h3>
-            <p>{{ book.description }}</p>
-            <div class="book-meta">
-              <span class="book-year">{{ book.year }}</span>
-              <span class="book-category">{{ book.category }}</span>
+<div class="zine-showcase">
+  {% assign zines = site.data.creative.zines | default: [] %}
+  {% if zines.size > 0 %}
+    {% for zine in zines %}
+    <div class="zine-container">
+      <div class="zine-header">
+        <h3>{{ zine.title }}</h3>
+        <p>{{ zine.description }}</p>
+        <div class="zine-meta">
+          <span>{{ zine.year }}</span> • <span>{{ zine.category }}</span>
+        </div>
+      </div>
+      
+      <div class="zine-viewer">
+        <div class="zine-pages" id="zine-{{ forloop.index }}">
+          <!-- 这里需要添加zine的页面图片 -->
+          <div class="zine-page">
+            <div class="page-placeholder">
+              <h4>{{ zine.title }}</h4>
+              <p>Page 1</p>
+              <small>Upload page images to enable browsing</small>
+            </div>
+          </div>
+          <div class="zine-page">
+            <div class="page-placeholder">
+              <h4>{{ zine.title }}</h4>
+              <p>Page 2</p>
+              <small>Upload page images to enable browsing</small>
+            </div>
+          </div>
+          <div class="zine-page">
+            <div class="page-placeholder">
+              <h4>{{ zine.title }}</h4>
+              <p>Page 3</p>
+              <small>Upload page images to enable browsing</small>
             </div>
           </div>
         </div>
-        <div class="book-actions">
-          <a href="{{ book.pdf }}" target="_blank" class="view-book">View PDF →</a>
+        
+        <div class="zine-controls">
+          <button class="zine-btn prev-btn" onclick="scrollZine('zine-{{ forloop.index }}', -1)">←</button>
+          <span class="zine-counter">
+            <span class="current-page">1</span> / <span class="total-pages">3</span>
+          </span>
+          <button class="zine-btn next-btn" onclick="scrollZine('zine-{{ forloop.index }}', 1)">→</button>
+        </div>
+        
+        <div class="zine-actions">
+          <a href="{{ zine.pdf }}" target="_blank" class="view-pdf">Download PDF →</a>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   {% else %}
-    <div class="book-placeholder">
+    <div class="zine-placeholder">
       <h4>📚 Zines</h4>
       <p>Add your zine projects here</p>
     </div>
@@ -335,94 +366,133 @@ Investigating audio's role in emotional experience and creativity.
   }
 }
 
-/* 书籍展示 */
-.book-showcase {
+/* Zine展示 */
+.zine-showcase {
   margin: 2rem 0;
+}
+
+.zine-container {
+  margin-bottom: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   overflow: hidden;
 }
 
-.book-scroll {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding: 1rem 0;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-accent) transparent;
+.zine-header {
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-bottom: 1px solid var(--border);
 }
 
-.book-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.book-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.book-scroll::-webkit-scrollbar-thumb {
-  background: var(--text-accent);
-  border-radius: 3px;
-}
-
-.book-item {
-  flex: 0 0 280px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border);
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.book-item:hover {
-  border-color: var(--text-secondary);
-  transform: translateY(-2px);
-}
-
-.book-cover {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-  padding: 2rem;
-  text-align: center;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.book-preview h3 {
-  margin: 0 0 1rem;
-  font-size: 1.3rem;
+.zine-header h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--text-primary);
 }
 
-.book-preview p {
+.zine-header p {
   margin: 0 0 1rem;
-  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-.book-meta {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.book-year, .book-category {
-  font-size: 0.8rem;
+.zine-meta {
+  font-size: 0.9rem;
   color: var(--text-accent);
-  background: rgba(255, 255, 255, 0.7);
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
 }
 
-.book-actions {
-  padding: 1rem;
-  text-align: center;
+.zine-viewer {
   background: var(--bg-card);
 }
 
-.view-book {
+.zine-pages {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.zine-pages::-webkit-scrollbar {
+  display: none;
+}
+
+.zine-page {
+  flex: 0 0 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-right: 1px solid var(--border);
+}
+
+.zine-page:last-child {
+  border-right: none;
+}
+
+.page-placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.page-placeholder h4 {
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+.page-placeholder small {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.zine-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+
+.zine-btn {
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.zine-btn:hover {
+  background: var(--text-secondary);
+}
+
+.zine-btn:disabled {
+  background: var(--text-accent);
+  cursor: not-allowed;
+}
+
+.zine-counter {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  min-width: 60px;
+  text-align: center;
+}
+
+.zine-actions {
+  padding: 1rem;
+  text-align: center;
+  background: #f7fafc;
+  border-top: 1px solid var(--border);
+}
+
+.view-pdf {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
@@ -430,25 +500,25 @@ Investigating audio's role in emotional experience and creativity.
   transition: border-color 0.2s ease;
 }
 
-.view-book:hover {
+.view-pdf:hover {
   border-bottom-color: var(--text-primary);
 }
 
-.book-placeholder {
+.zine-placeholder {
   text-align: center;
   padding: 3rem;
   background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
   border: 1px solid var(--border);
 }
 
-.book-placeholder h4 {
+.zine-placeholder h4 {
   margin: 0 0 1rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-primary);
 }
 
-.book-placeholder p {
+.zine-placeholder p {
   margin: 0;
   color: var(--text-secondary);
 }
@@ -491,5 +561,65 @@ Investigating audio's role in emotional experience and creativity.
   .book-preview h3 {
     font-size: 1.1rem;
   }
+  
+  .zine-header {
+    background: #2d3748;
+  }
+  
+  .zine-actions {
+    background: #2d3748;
+  }
+  
+  .zine-page {
+    background: #1a202c;
+  }
 }
+
+/* JavaScript for zine navigation */
+<script>
+function scrollZine(zineId, direction) {
+  const zinePages = document.getElementById(zineId);
+  const pageWidth = zinePages.offsetWidth;
+  const currentScroll = zinePages.scrollLeft;
+  const newScroll = currentScroll + (direction * pageWidth);
+  
+  zinePages.scrollTo({
+    left: newScroll,
+    behavior: 'smooth'
+  });
+  
+  // Update page counter
+  setTimeout(() => {
+    updatePageCounter(zineId);
+  }, 300);
+}
+
+function updatePageCounter(zineId) {
+  const zinePages = document.getElementById(zineId);
+  const pageWidth = zinePages.offsetWidth;
+  const currentPage = Math.round(zinePages.scrollLeft / pageWidth) + 1;
+  const totalPages = zinePages.children.length;
+  
+  const counter = zinePages.parentElement.querySelector('.zine-counter');
+  if (counter) {
+    counter.querySelector('.current-page').textContent = currentPage;
+    counter.querySelector('.total-pages').textContent = totalPages;
+  }
+  
+  // Update button states
+  const prevBtn = zinePages.parentElement.querySelector('.prev-btn');
+  const nextBtn = zinePages.parentElement.querySelector('.next-btn');
+  
+  if (prevBtn) prevBtn.disabled = currentPage === 1;
+  if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+}
+
+// Initialize page counters when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const zineContainers = document.querySelectorAll('.zine-pages');
+  zineContainers.forEach((container, index) => {
+    updatePageCounter(`zine-${index + 1}`);
+  });
+});
+</script>
 </style>
