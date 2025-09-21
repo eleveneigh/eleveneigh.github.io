@@ -25,26 +25,32 @@ Beyond research, I explore creativity through various mediums that inform my und
       
       <div class="zine-viewer">
         <div class="zine-pages" id="zine-{{ forloop.index }}">
-          <!-- 这里需要添加zine的页面图片 -->
+          <!-- Zine页面展示 -->
           <div class="zine-page">
-            <div class="page-placeholder">
-              <h4>{{ zine.title }}</h4>
-              <p>Page 1</p>
-              <small>Upload page images to enable browsing</small>
+            <div class="zine-page-content">
+              <div class="page-cover">
+                <h2>{{ zine.title }}</h2>
+                <p>{{ zine.description }}</p>
+                <div class="cover-meta">{{ zine.year }} • {{ zine.category }}</div>
+              </div>
             </div>
           </div>
           <div class="zine-page">
-            <div class="page-placeholder">
-              <h4>{{ zine.title }}</h4>
-              <p>Page 2</p>
-              <small>Upload page images to enable browsing</small>
+            <div class="zine-page-content">
+              <div class="page-content">
+                <h3>About This Zine</h3>
+                <p>Fragment of Life is a visual exploration of moments and memories, capturing the essence of everyday experiences through photography and storytelling.</p>
+                <p>This project represents a journey through different perspectives, finding beauty in the ordinary and meaning in the fleeting.</p>
+              </div>
             </div>
           </div>
           <div class="zine-page">
-            <div class="page-placeholder">
-              <h4>{{ zine.title }}</h4>
-              <p>Page 3</p>
-              <small>Upload page images to enable browsing</small>
+            <div class="zine-page-content">
+              <div class="page-content">
+                <h3>Process & Inspiration</h3>
+                <p>Created as a course project, this zine combines photographic storytelling with thoughtful design to create an immersive reading experience.</p>
+                <p>Each page tells a story, each image captures a moment, and together they form a complete narrative of life's fragments.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -348,20 +354,60 @@ Visual storytelling through different perspectives and techniques.
   border-right: none;
 }
 
-.page-placeholder {
-  text-align: center;
+.zine-page-content {
   padding: 2rem;
-  color: var(--text-secondary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.page-placeholder h4 {
+.page-cover {
+  text-align: center;
+  max-width: 400px;
+}
+
+.page-cover h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.page-cover p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.cover-meta {
+  font-size: 0.9rem;
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+.page-content {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.page-content h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
   margin: 0 0 1rem;
   color: var(--text-primary);
 }
 
-.page-placeholder small {
-  font-style: italic;
-  color: var(--text-accent);
+.page-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+
+.page-content p:last-child {
+  margin-bottom: 0;
 }
 
 .zine-controls {
