@@ -39,10 +39,10 @@ Visual storytelling through different perspectives and techniques.
 
 ---
 
-## Academic Projects
+## Zines
 
 <div class="book-showcase">
-  {% assign books = site.data.creative.academic_projects | default: [] %}
+  {% assign books = site.data.creative.zines | default: [] %}
   {% if books.size > 0 %}
     <div class="book-scroll">
       {% for book in books %}
@@ -65,8 +65,8 @@ Visual storytelling through different perspectives and techniques.
     </div>
   {% else %}
     <div class="book-placeholder">
-      <h4>📚 Academic Projects</h4>
-      <p>Add your course projects and academic work here</p>
+      <h4>📚 Zines</h4>
+      <p>Add your zine projects here</p>
     </div>
   {% endif %}
 </div>
