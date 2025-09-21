@@ -321,6 +321,9 @@ Visual storytelling through different perspectives and techniques.
   scrollbar-color: var(--text-accent) transparent;
   position: relative;
   z-index: 1;
+  /* 突破wrapper限制 */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .zine-full-width::-webkit-scrollbar {
