@@ -8,37 +8,6 @@ permalink: /creative/
 
 Beyond research, I explore creativity through various mediums that inform my understanding of human expression and design.
 
-## Photography
-
-Visual storytelling through different perspectives and techniques.
-
-### Featured Work
-
-<div class="creative-gallery">
-  {% assign photos = site.data.creative.photography | default: [] %}
-  {% if photos.size > 0 %}
-    {% for photo in photos %}
-    <div class="creative-item">
-      <img src="{{ photo.image }}" alt="{{ photo.title }}" loading="lazy">
-      <div class="creative-caption">
-        <h4>{{ photo.title }}</h4>
-        <p>{{ photo.description }}</p>
-      </div>
-    </div>
-    {% endfor %}
-  {% else %}
-    <div class="creative-item placeholder">
-      <div class="placeholder-content">
-        <h4>📸 Photography Portfolio</h4>
-        <p>Add your photos to showcase your visual work</p>
-        <small>Upload images and update <code>_data/creative.yml</code></small>
-      </div>
-    </div>
-  {% endif %}
-</div>
-
----
-
 ## Zines
 
 <div class="zine-showcase">
@@ -104,85 +73,32 @@ Visual storytelling through different perspectives and techniques.
 
 ---
 
-## Digital Art & Design
+## Photography
 
-Exploring the intersection of technology and visual creativity.
+Visual storytelling through different perspectives and techniques.
 
 <div class="creative-gallery">
-  {% assign designs = site.data.creative.design | default: [] %}
-  {% if designs.size > 0 %}
-    {% for design in designs %}
+  {% assign photos = site.data.creative.photography | default: [] %}
+  {% if photos.size > 0 %}
+    {% for photo in photos %}
     <div class="creative-item">
-      <img src="{{ design.image }}" alt="{{ design.title }}" loading="lazy">
+      <img src="{{ photo.image }}" alt="{{ photo.title }}" loading="lazy">
       <div class="creative-caption">
-        <h4>{{ design.title }}</h4>
-        <p>{{ design.description }}</p>
-        {% if design.tools %}
-        <div class="tools">
-          {% for tool in design.tools %}<span class="tool-tag">{{ tool }}</span>{% endfor %}
-        </div>
-        {% endif %}
+        <h4>{{ photo.title }}</h4>
+        <p>{{ photo.description }}</p>
       </div>
     </div>
     {% endfor %}
   {% else %}
     <div class="creative-item placeholder">
       <div class="placeholder-content">
-        <h4>🎨 Design Portfolio</h4>
-        <p>UI/UX concepts, generative art, and visual experiments</p>
-        <small>Add design work to <code>_data/creative.yml</code></small>
+        <h4>📸 Photography Portfolio</h4>
+        <p>Add your photos to showcase your visual work</p>
+        <small>Upload images and update <code>_data/creative.yml</code></small>
       </div>
     </div>
   {% endif %}
 </div>
-
----
-
-## Music & Sound
-
-Investigating audio's role in emotional experience and creativity.
-
-<div class="music-projects">
-  {% assign music = site.data.creative.music | default: [] %}
-  {% if music.size > 0 %}
-    {% for track in music %}
-    <div class="music-item">
-      <h4>{{ track.title }}</h4>
-      <p>{{ track.description }}</p>
-      {% if track.audio %}
-        <audio controls>
-          <source src="{{ track.audio }}" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      {% endif %}
-      {% if track.demo %}
-        <a href="{{ track.demo }}" target="_blank" class="demo-link">View Demo →</a>
-      {% endif %}
-      {% if track.tools %}
-      <div class="tools">
-        {% for tool in track.tools %}<span class="tool-tag">{{ tool }}</span>{% endfor %}
-      </div>
-      {% endif %}
-    </div>
-    {% endfor %}
-  {% else %}
-    <div class="music-item placeholder-music">
-      <h4>🎵 Audio Portfolio</h4>
-      <p>Sound design, music production, and audio research projects</p>
-      <small>Add audio work to <code>_data/creative.yml</code></small>
-    </div>
-  {% endif %}
-</div>
-
----
-
-## Creative Philosophy
-
-*"Creativity is not just about making something beautiful—it's about understanding how design and art can serve human needs and emotions. My creative work directly informs my research in HCI and affective computing."*
-
----
-
-*Want to collaborate on creative projects? [Get in touch](/contact)*
 
 <style>
 .creative-gallery {
