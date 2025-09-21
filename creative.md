@@ -24,43 +24,55 @@ Beyond research, I explore creativity through various mediums that inform my und
       </div>
       
       <div class="zine-viewer">
-        <div class="zine-pages" id="zine-{{ forloop.index }}">
-          <!-- Zine页面展示 -->
-          <div class="zine-page">
-            <div class="zine-page-content">
-              <div class="page-cover">
-                <h2>{{ zine.title }}</h2>
-                <p>{{ zine.description }}</p>
-                <div class="cover-meta">{{ zine.year }} • {{ zine.category }}</div>
+        <div class="zine-scroll-container">
+          <div class="zine-scroll" id="zine-{{ forloop.index }}">
+            <!-- 封面页 -->
+            <div class="zine-page-wide">
+              <div class="page-content">
+                <div class="cover-section">
+                  <h2>{{ zine.title }}</h2>
+                  <p>{{ zine.description }}</p>
+                  <div class="cover-meta">{{ zine.year }} • {{ zine.category }}</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="zine-page">
-            <div class="zine-page-content">
+            
+            <!-- 内容页1 -->
+            <div class="zine-page-wide">
               <div class="page-content">
                 <h3>About This Zine</h3>
                 <p>Fragment of Life is a visual exploration of moments and memories, capturing the essence of everyday experiences through photography and storytelling.</p>
                 <p>This project represents a journey through different perspectives, finding beauty in the ordinary and meaning in the fleeting.</p>
               </div>
             </div>
-          </div>
-          <div class="zine-page">
-            <div class="zine-page-content">
+            
+            <!-- 内容页2 -->
+            <div class="zine-page-wide">
               <div class="page-content">
                 <h3>Process & Inspiration</h3>
                 <p>Created as a course project, this zine combines photographic storytelling with thoughtful design to create an immersive reading experience.</p>
                 <p>Each page tells a story, each image captures a moment, and together they form a complete narrative of life's fragments.</p>
               </div>
             </div>
+            
+            <!-- 内容页3 -->
+            <div class="zine-page-wide">
+              <div class="page-content">
+                <h3>Visual Storytelling</h3>
+                <p>The zine explores themes of memory, time, and human connection through carefully curated imagery and thoughtful layout design.</p>
+                <p>Each spread invites the reader to pause and reflect on the beauty found in everyday moments.</p>
+              </div>
+            </div>
+            
+            <!-- 内容页4 -->
+            <div class="zine-page-wide">
+              <div class="page-content">
+                <h3>Reflection</h3>
+                <p>Through this project, I discovered how visual narratives can capture emotions and experiences that words alone cannot express.</p>
+                <p>Fragment of Life serves as both a creative expression and a meditation on the fleeting nature of our most precious moments.</p>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <div class="zine-controls">
-          <button class="zine-btn prev-btn" onclick="scrollZine('zine-{{ forloop.index }}', -1)">←</button>
-          <span class="zine-counter">
-            <span class="current-page">1</span> / <span class="total-pages">3</span>
-          </span>
-          <button class="zine-btn next-btn" onclick="scrollZine('zine-{{ forloop.index }}', 1)">→</button>
         </div>
         
         <div class="zine-actions">
@@ -328,123 +340,106 @@ Visual storytelling through different perspectives and techniques.
   background: var(--bg-card);
 }
 
-.zine-pages {
-  display: flex;
+.zine-scroll-container {
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-accent) transparent;
+  margin: -2rem;
+  padding: 2rem;
 }
 
-.zine-pages::-webkit-scrollbar {
-  display: none;
+.zine-scroll-container::-webkit-scrollbar {
+  height: 8px;
 }
 
-.zine-page {
-  flex: 0 0 100%;
-  min-height: 400px;
+.zine-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.zine-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--text-accent);
+  border-radius: 4px;
+}
+
+.zine-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.zine-scroll {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f9f9f9;
-  border-right: 1px solid var(--border);
+  gap: 2rem;
+  width: max-content;
+  padding: 1rem 0;
 }
 
-.zine-page:last-child {
-  border-right: none;
+.zine-page-wide {
+  flex: 0 0 600px;
+  min-height: 400px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.zine-page-content {
+.zine-page-wide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.page-content {
   padding: 2rem;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
-.page-cover {
+.cover-section {
   text-align: center;
-  max-width: 400px;
 }
 
-.page-cover h2 {
-  font-size: 2rem;
+.cover-section h2 {
+  font-size: 2.5rem;
   font-weight: 300;
   margin: 0 0 1rem;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
-.page-cover p {
-  font-size: 1.1rem;
+.cover-section p {
+  font-size: 1.2rem;
   color: var(--text-secondary);
-  margin: 0 0 1.5rem;
+  margin: 0 0 2rem;
   line-height: 1.5;
 }
 
 .cover-meta {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-accent);
   font-weight: 500;
 }
 
-.page-content {
-  max-width: 500px;
-  line-height: 1.6;
-}
-
 .page-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
 }
 
 .page-content p {
   font-size: 1rem;
   color: var(--text-secondary);
-  margin: 0 0 1rem;
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
 }
 
 .page-content p:last-child {
   margin-bottom: 0;
-}
-
-.zine-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-card);
-  border-top: 1px solid var(--border);
-}
-
-.zine-btn {
-  background: var(--text-primary);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.2s ease;
-}
-
-.zine-btn:hover {
-  background: var(--text-secondary);
-}
-
-.zine-btn:disabled {
-  background: var(--text-accent);
-  cursor: not-allowed;
-}
-
-.zine-counter {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  min-width: 60px;
-  text-align: center;
 }
 
 .zine-actions {
@@ -537,51 +532,4 @@ Visual storytelling through different perspectives and techniques.
   }
 }
 
-/* JavaScript for zine navigation */
-<script>
-function scrollZine(zineId, direction) {
-  const zinePages = document.getElementById(zineId);
-  const pageWidth = zinePages.offsetWidth;
-  const currentScroll = zinePages.scrollLeft;
-  const newScroll = currentScroll + (direction * pageWidth);
-  
-  zinePages.scrollTo({
-    left: newScroll,
-    behavior: 'smooth'
-  });
-  
-  // Update page counter
-  setTimeout(() => {
-    updatePageCounter(zineId);
-  }, 300);
-}
-
-function updatePageCounter(zineId) {
-  const zinePages = document.getElementById(zineId);
-  const pageWidth = zinePages.offsetWidth;
-  const currentPage = Math.round(zinePages.scrollLeft / pageWidth) + 1;
-  const totalPages = zinePages.children.length;
-  
-  const counter = zinePages.parentElement.querySelector('.zine-counter');
-  if (counter) {
-    counter.querySelector('.current-page').textContent = currentPage;
-    counter.querySelector('.total-pages').textContent = totalPages;
-  }
-  
-  // Update button states
-  const prevBtn = zinePages.parentElement.querySelector('.prev-btn');
-  const nextBtn = zinePages.parentElement.querySelector('.next-btn');
-  
-  if (prevBtn) prevBtn.disabled = currentPage === 1;
-  if (nextBtn) nextBtn.disabled = currentPage === totalPages;
-}
-
-// Initialize page counters when page loads
-document.addEventListener('DOMContentLoaded', function() {
-  const zineContainers = document.querySelectorAll('.zine-pages');
-  zineContainers.forEach((container, index) => {
-    updatePageCounter(`zine-${index + 1}`);
-  });
-});
-</script>
 </style>
