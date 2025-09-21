@@ -39,6 +39,40 @@ Visual storytelling through different perspectives and techniques.
 
 ---
 
+## Publications & Books
+
+<div class="book-showcase">
+  {% assign books = site.data.creative.books | default: [] %}
+  {% if books.size > 0 %}
+    <div class="book-scroll">
+      {% for book in books %}
+      <div class="book-item">
+        <div class="book-cover">
+          <div class="book-preview">
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.description }}</p>
+            <div class="book-meta">
+              <span class="book-year">{{ book.year }}</span>
+              <span class="book-category">{{ book.category }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="book-actions">
+          <a href="{{ book.pdf }}" target="_blank" class="view-book">View PDF →</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="book-placeholder">
+      <h4>📚 Publications</h4>
+      <p>Add your published works and books here</p>
+    </div>
+  {% endif %}
+</div>
+
+---
+
 ## Digital Art & Design
 
 Exploring the intersection of technology and visual creativity.
@@ -301,6 +335,139 @@ Investigating audio's role in emotional experience and creativity.
   }
 }
 
+/* 书籍展示 */
+.book-showcase {
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.book-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-accent) transparent;
+}
+
+.book-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.book-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.book-scroll::-webkit-scrollbar-thumb {
+  background: var(--text-accent);
+  border-radius: 3px;
+}
+
+.book-item {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.book-item:hover {
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
+}
+
+.book-cover {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 2rem;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-preview h3 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.book-preview p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.book-meta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.book-year, .book-category {
+  font-size: 0.8rem;
+  color: var(--text-accent);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.book-actions {
+  padding: 1rem;
+  text-align: center;
+  background: var(--bg-card);
+}
+
+.view-book {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.view-book:hover {
+  border-bottom-color: var(--text-primary);
+}
+
+.book-placeholder {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 1px solid var(--border);
+}
+
+.book-placeholder h4 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.book-placeholder p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+  .book-cover {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  }
+  
+  .book-year, .book-category {
+    background: rgba(45, 55, 72, 0.7);
+  }
+  
+  .book-placeholder {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  }
+}
+
 /* 响应式 */
 @media (max-width: 768px) {
   .creative-gallery {
@@ -310,6 +477,19 @@ Investigating audio's role in emotional experience and creativity.
   
   .music-item {
     padding: 1rem;
+  }
+  
+  .book-item {
+    flex: 0 0 240px;
+  }
+  
+  .book-cover {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+  
+  .book-preview h3 {
+    font-size: 1.1rem;
   }
 }
 </style>

@@ -35,3 +35,10 @@ music:
     description: "Responsive audio for user interface interactions"
     demo: "https://example.com/interactive-sound"
     tools: ["Web Audio API", "Tone.js"]
+
+books:
+  - title: "Fragment of Life"
+    description: "A visual journey through moments and memories"
+    pdf: "/Fragments Of Life.pdf"
+    category: "photography"
+    year: "2024"
