@@ -35,44 +35,94 @@ Beyond research, I explore creativity through various mediums that inform my und
             </div>
           </div>
           
-          <!-- Fragment of Life 页面内容 -->
+          <!-- Fragment of Life 实际页面内容 -->
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <div class="page-placeholder">
-                <h3>Moments</h3>
-                <p>Capturing fleeting moments that define our journey through life</p>
-                <small>Photography • 2024</small>
-              </div>
+              <img src="/assets/images/fragments/page_1.png" alt="Fragment of Life - Page 1" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <div class="page-placeholder">
-                <h3>Memories</h3>
-                <p>Visual narratives that preserve the essence of experiences</p>
-                <small>Creative Expression • 2024</small>
-              </div>
+              <img src="/assets/images/fragments/page_2.png" alt="Fragment of Life - Page 2" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <div class="page-placeholder">
-                <h3>Reflections</h3>
-                <p>Exploring the intersection of art, emotion, and human connection</p>
-                <small>Visual Storytelling • 2024</small>
-              </div>
+              <img src="/assets/images/fragments/page_3.png" alt="Fragment of Life - Page 3" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <div class="page-placeholder">
-                <h3>Journey</h3>
-                <p>A collection of visual fragments that together tell a larger story</p>
-                <small>Photography Series • 2024</small>
-              </div>
+              <img src="/assets/images/fragments/page_4.png" alt="Fragment of Life - Page 4" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_5.png" alt="Fragment of Life - Page 5" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_6.png" alt="Fragment of Life - Page 6" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_7.png" alt="Fragment of Life - Page 7" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_8.png" alt="Fragment of Life - Page 8" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_9.png" alt="Fragment of Life - Page 9" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_10.png" alt="Fragment of Life - Page 10" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_11.png" alt="Fragment of Life - Page 11" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_12.png" alt="Fragment of Life - Page 12" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_13.png" alt="Fragment of Life - Page 13" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_14.png" alt="Fragment of Life - Page 14" class="zine-page-image">
+            </div>
+          </div>
+          
+          <div class="zine-slide page-slide">
+            <div class="page-content">
+              <img src="/assets/images/fragments/page_15.png" alt="Fragment of Life - Page 15" class="zine-page-image">
             </div>
           </div>
           
@@ -175,11 +225,29 @@ Beyond research, I explore creativity through various mediums that inform my und
   font-weight: 500;
 }
 
-/* 页面占位符 */
+/* 页面内容 */
 .page-slide {
   background: white;
 }
 
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.zine-page-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面占位符（保留作为备用） */
 .page-placeholder {
   text-align: center;
   padding: 2rem;
