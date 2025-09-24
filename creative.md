@@ -376,9 +376,8 @@ Visual storytelling through different perspectives and techniques.
 .zine-scroll-hint {
   text-align: center;
   padding: 1rem;
-  background: rgba(102, 126, 234, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.2);
-  border-radius: 8px;
+  background: transparent;
+  border: none;
   margin: 1rem;
 }
 
@@ -432,6 +431,9 @@ Visual storytelling through different perspectives and techniques.
   /* 突破wrapper限制 */
   left: 50%;
   transform: translateX(-50%);
+  /* 确保只能横向滚动 */
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
 }
 
 .zine-full-width::-webkit-scrollbar {
@@ -457,6 +459,9 @@ Visual storytelling through different perspectives and techniques.
   height: 80vh;
   min-height: 500px;
   position: relative;
+  /* 确保flex布局正确 */
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .zine-slide {
