@@ -6,6 +6,7 @@ permalink: /creative/
 
 Beyond research, I explore creativity through various mediums that inform my understanding of human expression and design.
 
+<!-- Updated with original PDF images -->
 ## Zines
 
 {% assign zines = site.data.creative.zines | default: [] %}
