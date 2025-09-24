@@ -5,18 +5,3 @@ zines:
     category: "photography"
     year: "2024"
 
-photography:
-  - title: "Fragment of Life - Cover"
-    description: "A visual journey through moments and memories captured in photography"
-    image: "/assets/images/contact-hero.jpg"
-    category: "photography"
-    
-  - title: "Creative Exploration"
-    description: "Exploring different perspectives and techniques in visual storytelling"
-    image: "/assets/images/contact-hero.jpg"
-    category: "creative"
-    
-  - title: "Visual Narratives"
-    description: "Combining photography with design to tell compelling stories"
-    image: "/assets/images/contact-hero.jpg"
-    category: "narrative"
