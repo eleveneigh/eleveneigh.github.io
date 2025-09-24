@@ -235,11 +235,11 @@ Beyond research, I explore creativity through various mediums that inform my und
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  flex: 1;
+  box-sizing: border-box;
 }
 
 .zine-page-image {
@@ -317,7 +317,7 @@ Beyond research, I explore creativity through various mediums that inform my und
 
 .zine-scroll-horizontal {
   display: flex;
-  width: calc(100vw * 17); /* 17个页面：1封面 + 15内容页 + 1结束页 */
+  width: max-content;
   height: 80vh;
   min-height: 500px;
   position: relative;
@@ -333,14 +333,15 @@ Beyond research, I explore creativity through various mediums that inform my und
   flex: 0 0 100vw;
   height: 100%;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
   background: var(--bg-card);
   border-right: none;
   position: relative;
   margin: 0;
   padding: 0;
   width: 100vw;
+  box-sizing: border-box;
 }
 
 .zine-slide:last-child {
