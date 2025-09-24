@@ -291,6 +291,10 @@ Beyond research, I explore creativity through various mediums that inform my und
   /* 确保只能横向滚动 */
   touch-action: pan-x;
   -webkit-overflow-scrolling: touch;
+  /* 消除所有间距 */
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .zine-full-width::-webkit-scrollbar {
@@ -319,6 +323,9 @@ Beyond research, I explore creativity through various mediums that inform my und
   /* 确保flex布局正确 */
   flex-direction: row;
   align-items: stretch;
+  margin: 0;
+  padding: 0;
+  gap: 0;
 }
 
 .zine-slide {
@@ -330,6 +337,8 @@ Beyond research, I explore creativity through various mediums that inform my und
   background: var(--bg-card);
   border-right: none;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .zine-slide:last-child {
