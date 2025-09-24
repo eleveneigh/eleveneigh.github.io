@@ -99,7 +99,27 @@ Beyond research, I explore creativity through various mediums that inform my und
 ---
 
 <style>
+/* CSS变量定义 */
+:root {
+  --max-width: 800px;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --text-accent: #4a5568;
+  --border: #e2e8f0;
+  --bg-card: #ffffff;
+  --spacing: 2rem;
+}
 
+/* 深色模式 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f7fafc;
+    --text-secondary: #a0aec0;
+    --text-accent: #cbd5e0;
+    --border: #2d3748;
+    --bg-card: #1a202c;
+  }
+}
 
 /* Zine容器 */
 .zine-container {
