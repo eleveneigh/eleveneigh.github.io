@@ -173,14 +173,14 @@ Beyond research, I explore creativity through various mediums that inform my und
 
 /* Zine容器 */
 .zine-container {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .zine-header {
-  padding: 1.5rem;
+  padding: 1rem;
   background: #f7fafc;
   border-bottom: 1px solid var(--border);
 }
@@ -212,10 +212,10 @@ Beyond research, I explore creativity through various mediums that inform my und
 /* 滚动提示 */
 .zine-scroll-hint {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   background: transparent;
   border: none;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .zine-scroll-hint p {
@@ -236,15 +236,15 @@ Beyond research, I explore creativity through various mediums that inform my und
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .zine-page-image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 页面占位符（保留作为备用） */
