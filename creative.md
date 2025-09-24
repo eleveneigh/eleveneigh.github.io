@@ -4,8 +4,6 @@ title: Creative
 permalink: /creative/
 ---
 
-# Creative Projects
-
 Beyond research, I explore creativity through various mediums that inform my understanding of human expression and design.
 
 ## Zines
@@ -21,18 +19,7 @@ Beyond research, I explore creativity through various mediums that inform my und
     </div>
     
     <div class="zine-viewer">
-      <!-- PDF嵌入选项 -->
-      <div class="pdf-viewer-container">
-        <iframe src="{{ zine.pdf }}#toolbar=0&navpanes=0&scrollbar=0" 
-                class="pdf-iframe" 
-                frameborder="0">
-        </iframe>
-        <div class="pdf-fallback">
-          <p>Your browser doesn't support PDF embedding. Please try a different browser to view the content.</p>
-        </div>
-      </div>
-      
-      <!-- 替代方案：横向滚动页面 -->
+      <!-- 横向滚动页面 -->
       <div class="zine-scroll-hint">
         <p>← Scroll to browse pages →</p>
       </div>
@@ -342,34 +329,10 @@ Visual storytelling through different perspectives and techniques.
   color: var(--text-accent);
 }
 
-/* PDF嵌入 */
-.pdf-viewer-container {
+/* Zine查看器 */
+.zine-viewer {
   position: relative;
   width: 100%;
-  height: 80vh;
-  min-height: 500px;
-  background: #f5f5f5;
-  border-bottom: 1px solid var(--border);
-}
-
-.pdf-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.pdf-fallback {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 2rem;
-}
-
-.pdf-iframe:not([src]) + .pdf-fallback {
-  display: block;
 }
 
 /* 滚动提示 */
