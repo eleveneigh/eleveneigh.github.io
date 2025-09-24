@@ -189,7 +189,7 @@ body {
     <h2 class="section-title">Research & Projects</h2>
     {% assign items = site.data.projects | default: [] %}
     {% for p in items %}
-    <a href="/projects/" class="project-card-link">
+    <a href="{{ '/projects/' | relative_url }}" class="project-card-link">
       <div class="project-card">
         <h3 class="project-title">{{ p.name }}</h3>
         <p class="project-description">{{ p.brief }}</p>
