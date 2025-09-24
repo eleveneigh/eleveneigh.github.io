@@ -38,91 +38,91 @@ Beyond research, I explore creativity through various mediums that inform my und
           <!-- Fragment of Life 实际页面内容 -->
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_1.png" alt="Fragment of Life - Page 1" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_1.png' | relative_url }}" alt="Fragment of Life - Page 1" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_2.png" alt="Fragment of Life - Page 2" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_2.png' | relative_url }}" alt="Fragment of Life - Page 2" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_3.png" alt="Fragment of Life - Page 3" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_3.png' | relative_url }}" alt="Fragment of Life - Page 3" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_4.png" alt="Fragment of Life - Page 4" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_4.png' | relative_url }}" alt="Fragment of Life - Page 4" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_5.png" alt="Fragment of Life - Page 5" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_5.png' | relative_url }}" alt="Fragment of Life - Page 5" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_6.png" alt="Fragment of Life - Page 6" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_6.png' | relative_url }}" alt="Fragment of Life - Page 6" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_7.png" alt="Fragment of Life - Page 7" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_7.png' | relative_url }}" alt="Fragment of Life - Page 7" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_8.png" alt="Fragment of Life - Page 8" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_8.png' | relative_url }}" alt="Fragment of Life - Page 8" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_9.png" alt="Fragment of Life - Page 9" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_9.png' | relative_url }}" alt="Fragment of Life - Page 9" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_10.png" alt="Fragment of Life - Page 10" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_10.png' | relative_url }}" alt="Fragment of Life - Page 10" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_11.png" alt="Fragment of Life - Page 11" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_11.png' | relative_url }}" alt="Fragment of Life - Page 11" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_12.png" alt="Fragment of Life - Page 12" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_12.png' | relative_url }}" alt="Fragment of Life - Page 12" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_13.png" alt="Fragment of Life - Page 13" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_13.png' | relative_url }}" alt="Fragment of Life - Page 13" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_14.png" alt="Fragment of Life - Page 14" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_14.png' | relative_url }}" alt="Fragment of Life - Page 14" class="zine-page-image">
             </div>
           </div>
           
           <div class="zine-slide page-slide">
             <div class="page-content">
-              <img src="/assets/images/fragments/page_15.png" alt="Fragment of Life - Page 15" class="zine-page-image">
+              <img src="{{ '/assets/images/fragments/page_15.png' | relative_url }}" alt="Fragment of Life - Page 15" class="zine-page-image">
             </div>
           </div>
           
