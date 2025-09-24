@@ -1,7 +1,10 @@
-- name: MusicCollage (Therapeutic Collage System)
-  brief: Web-based AI-assisted collage with YOLOv8 + Qwen agent; supports reflective creation workflow.
-  tags: [HCI, Web, YOLOv8, Qwen]
-  demo: https://example.com/musixcollage
-  code: https://github.com/eleveneigh/musiccollage
-  paper: https://example.com/poster.pdf
+- name: Multi-Modal AI Creative Assistant
+  brief: Innovative AI assistant integrating YOLOv8, Grounded-SAM, Qwen-VL-Plus, and MediaPipe for real-time creative support. Conducted comprehensive user research (N=15) with findings submitted to ACM CHI 2026.
+  tags: [Multi-Modal AI, YOLOv8, Grounded-SAM, Qwen-VL-Plus, MediaPipe, HCI Research]
+  paper: "ACM CHI 2026 (under review)"
+
+- name: Digital Collage Tool for Mental Stress Relief
+  brief: Co-design research investigating AI impacts on creative processes through workshops and interviews (N=8). Published findings in ACM CHI 2025 Extended Abstracts.
+  tags: [Co-Design, ATLAS.ti, Thematic Analysis, CHI 2025]
+  paper: "CHI EA '25"
 
