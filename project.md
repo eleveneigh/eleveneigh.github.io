@@ -4,8 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
-
 ## Multi-Modal AI Creative Assistant
 
 **Student Research Scholar (SRS) Program | Research Assistant, HCI Lab, DKU**  
