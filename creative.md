@@ -244,7 +244,7 @@ Beyond research, I explore creativity through various mediums that inform my und
 .zine-page-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0;
   box-shadow: none;
 }
