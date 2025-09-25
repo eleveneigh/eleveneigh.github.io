@@ -30,9 +30,9 @@ Beyond research, I explore creativity through various mediums that inform my und
           <!-- 封面页 -->
           <div class="zine-slide cover-slide">
             <div class="slide-content">
-              <h1>{{ zine.title }}</h1>
-              <p>{{ zine.description }}</p>
-              <div class="slide-meta">{{ zine.year }} • {{ zine.category }}</div>
+              <h1>Fragment of Life</h1>
+              <p>A visual journey through moments and memories</p>
+              <div class="slide-meta">2024 • photography</div>
             </div>
           </div>
           
