@@ -178,6 +178,12 @@ Beyond research, I explore creativity through various mediums that inform my und
   border: none;
   border-radius: 0;
   overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .zine-header {
