@@ -161,6 +161,13 @@ Beyond research, I explore creativity through various mediums that inform my und
   --spacing: 2rem;
 }
 
+/* 仅在本页面：让页内一级小标题（如“Zines”）始终居中 */
+.page-content > h2:first-of-type {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* 深色模式 */
 @media (prefers-color-scheme: dark) {
   :root {
