@@ -354,17 +354,15 @@ Beyond research, I explore creativity through various mediums that inform my und
 .cover-slide {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  flex: 0 0 auto;
-  width: auto;
-  min-width: 100vw;
+  flex: 0 0 100vw;
+  width: 100vw;
 }
 
 .end-slide {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
-  flex: 0 0 auto;
-  width: auto;
-  min-width: 100vw;
+  flex: 0 0 100vw;
+  width: 100vw;
 }
 
 .slide-content {
