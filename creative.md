@@ -249,10 +249,8 @@ Beyond research, I explore creativity through various mediums that inform my und
 }
 
 .zine-page-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 0;
   box-shadow: none;
@@ -339,7 +337,7 @@ Beyond research, I explore creativity through various mediums that inform my und
 }
 
 .zine-slide {
-  flex: 0 0 auto;
+  flex: 0 0 100vw;
   height: 100%;
   display: flex;
   align-items: center;
@@ -349,7 +347,7 @@ Beyond research, I explore creativity through various mediums that inform my und
   position: relative;
   margin: 0;
   padding: 0;
-  width: auto;
+  width: 100vw;
   box-sizing: border-box;
 }
 
@@ -360,17 +358,11 @@ Beyond research, I explore creativity through various mediums that inform my und
 .cover-slide {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  flex: 0 0 100vw !important;
-  width: 100vw !important;
-  min-width: 100vw !important;
 }
 
 .end-slide {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
-  flex: 0 0 100vw !important;
-  width: 100vw !important;
-  min-width: 100vw !important;
 }
 
 .slide-content {
