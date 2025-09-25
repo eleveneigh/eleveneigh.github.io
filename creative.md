@@ -178,12 +178,13 @@ Beyond research, I explore creativity through various mediums that inform my und
   border: none;
   border-radius: 0;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  max-width: none !important;
 }
 
 .zine-header {
@@ -283,9 +284,9 @@ Beyond research, I explore creativity through various mediums that inform my und
 
 /* 全屏横向滚动Zine */
 .zine-full-width {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -294,8 +295,8 @@ Beyond research, I explore creativity through various mediums that inform my und
   position: relative;
   z-index: 1;
   /* 突破wrapper限制 */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   /* 确保只能横向滚动 */
   touch-action: pan-x;
   -webkit-overflow-scrolling: touch;
@@ -303,6 +304,7 @@ Beyond research, I explore creativity through various mediums that inform my und
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  max-width: none !important;
 }
 
 .zine-full-width::-webkit-scrollbar {
