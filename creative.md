@@ -372,8 +372,8 @@ Beyond research, I explore creativity through various mediums that inform my und
 }
 
 .slide-content {
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
   text-align: center;
   padding: 2rem;
   box-sizing: border-box;
@@ -382,10 +382,6 @@ Beyond research, I explore creativity through various mediums that inform my und
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* 确保内容在屏幕中央 */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .slide-content h1 {
