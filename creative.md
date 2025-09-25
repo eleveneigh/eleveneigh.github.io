@@ -366,9 +366,11 @@ Beyond research, I explore creativity through various mediums that inform my und
 }
 
 .slide-content {
-  max-width: 800px;
+  max-width: 100%;
+  width: 100%;
   text-align: center;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .slide-content h1 {
