@@ -1,20 +1,29 @@
 plugins:
   - jekyll-seo-tag
-
-title: Robin Wu
-description: HCI Researcher | AI-Assisted Creativity
+  # - jekyll-sitemap     # 强烈推荐加上，提升 SEO
 theme: minima
 
-header_pages:
-  - about.md
-  - project.md
-  - creative.md
-  - contact.md
+title: Robin Wu
+description: HCI Researcher @ Duke Kunshan University | Exploring AI-Assisted Creativity & Emotional Well-being
 
-author: Robin Wu   
+# 【新增】GitHub Pages 必须加这两个，否则链接、SEO、sitemap 都会出问题
+url: "https://eleveneigh.github.io"
+baseurl: ""
+
+author: Robin Wu
 
 minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
     - { platform: email,   user_url: "mailto:robinwu328@gmail.com" }
+    # 可以再加（如果有的话）：
+    # - { platform: google_scholar, user_url: "你的 Google Scholar 链接" }
+    # - { platform: orcid, user_url: "你的 ORCID" }
+
+# 可选：让首页更友好
+header_pages:
+  - about.md
+  - projects.md     # 建议改成复数，更符合习惯
+  - creative.md
+  - contact.md

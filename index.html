@@ -110,6 +110,12 @@ body {
   margin: 0 0 1rem;
 }
 
+.project-meta {
+  margin: 0 0 0.6rem;
+  color: var(--text-accent);
+  font-size: 0.85rem;
+}
+
 .project-tags {
   display: flex;
   gap: 0.5rem;
@@ -128,6 +134,10 @@ body {
 .project-links {
   display: flex;
   gap: 1rem;
+}
+
+.projects-cta {
+  margin-top: 1rem;
 }
 
 .project-link {
@@ -187,24 +197,31 @@ body {
 
   <div class="projects">
     <h2 class="section-title">Research & Projects</h2>
-    {% assign items = site.data.projects | default: [] %}
-    {% for p in items %}
+    {% assign items = site.data.projects %}
+    {% for p in items limit: 3 %}
     <a href="{{ '/projects/' | relative_url }}" class="project-card-link">
       <div class="project-card">
         <h3 class="project-title">{{ p.name }}</h3>
+        {% if p.role or p.period %}
+        <p class="project-meta">
+          {% if p.role %}{{ p.role }}{% endif %}{% if p.role and p.period %} · {% endif %}{% if p.period %}{{ p.period }}{% endif %}
+        </p>
+        {% endif %}
         <p class="project-description">{{ p.brief }}</p>
         {% if p.tags %}
         <div class="project-tags">
-          {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+          {% for t in p.tags limit: 4 %}<span class="tag">{{ t }}</span>{% endfor %}
         </div>
         {% endif %}
         <div class="project-links">
-          {% if p.demo %}<span class="project-link">Demo</span>{% endif %}
-          {% if p.code %}<span class="project-link">Code</span>{% endif %}
-          {% if p.paper %}<span class="project-link">Paper</span>{% endif %}
+          <span class="project-link">View Details</span>
+          {% if p.paper %}<span class="project-link">Publication</span>{% endif %}
         </div>
       </div>
     </a>
     {% endfor %}
+    <p class="projects-cta">
+      <a class="project-link" href="{{ '/projects/' | relative_url }}">See all projects →</a>
+    </p>
   </div>
 </div>

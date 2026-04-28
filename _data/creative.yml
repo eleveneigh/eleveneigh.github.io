@@ -5,3 +5,10 @@ zines:
     category: "photography"
     year: "2024"
 
+poems:
+  - title: "Poems in Conversation with Photography"
+    description: "A poetry work in dialogue with photographic images."
+    file: "/Leaving.pdf"
+    category: "poetry + photography"
+    year: "2026"
+
