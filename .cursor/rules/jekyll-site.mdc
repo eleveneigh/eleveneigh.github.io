@@ -1,0 +1,36 @@
+---
+description: Core conventions for eleveneigh.github.io (Jekyll + Minima)
+alwaysApply: true
+---
+
+# Personal site (Jekyll)
+
+## Stack
+
+- Jekyll 4.x, Minima theme, `jekyll-seo-tag`
+- Content: Markdown/HTML pages, `_data/*.yml`, `assets/`
+- Local dev: `bundle exec jekyll serve` from repo root (use `Gemfile`)
+
+## Architecture
+
+- **Data-driven content**: lists (projects, creative works) live in `_data/*.yml`; pages loop with Liquid (`site.data.projects`, `site.data.creative.*`).
+- **Do not** use `default: []` in Liquid `assign` (breaks on this setup); use `{% assign x = site.data.foo %}` and check `x.size`.
+- **Pages**: front matter with `layout: page` (or `default` for `index.html`), explicit `permalink`, title in English unless user asks otherwise.
+- **Nav**: new top-level pages must appear in `_config.yml` → `header_pages` (e.g. `projects.md`, not `project.md`).
+
+## Style & assets
+
+- Prefer `assets/css/*.css` included from pages; avoid large inline `<style>` blocks in `.md`.
+- Match existing minimal design (CSS variables, cards, centered `.creative-page` max-width).
+- Reuse existing class names (`creative-item`, `creative-list`, `project-card`) before inventing new patterns.
+
+## Git & deploy
+
+- Never commit `_site/`, `.jekyll-cache/`, `vendor/bundle/` (see `.gitignore`).
+- Do not `git commit` or `git push` unless the user explicitly asks.
+- Commit messages: Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`).
+
+## Scope
+
+- Only change files required for the task; no drive-by refactors or unsolicited markdown docs.
+- Do not edit generated `_site/` output.

@@ -1,0 +1,28 @@
+---
+description: Creative page, projects data, and YAML conventions
+globs: creative.md,projects.md,index.html,_data/**/*.yml,assets/css/**
+alwaysApply: false
+---
+
+# Creative & projects
+
+## Creative page (`creative.md`)
+
+- Section order unless user says otherwise: **Poetry** (cards) → **Zines** (cards).
+- Both sections use the same card pattern: `creative-list` + `creative-item` (title, description, `zine-meta` for year • category, link `Open work (PDF)`).
+- Section headings: use `<h2>Poetry</h2>` / `<h2>Zines</h2>` inside `.creative-page` (Markdown `##` inside a wrapping `<div>` can fail to render).
+- PDF links: `{{ item.file | relative_url }}` or `{{ zine.pdf | relative_url }}`, `target="_blank" rel="noopener"`.
+- Do not restore full-viewport horizontal zine carousels unless the user explicitly requests them.
+
+## Data files (`_data/`)
+
+- Quote YAML values containing `:` (e.g. project names like `Juxta: ...`).
+- Creative schema example:
+  - `zines`: `title`, `description`, `pdf`, `category`, `year`
+  - `poems`: `title`, `description`, `file`, `category`, `year`
+- Projects schema: `name`, `role`, `period`, `brief`, `highlights` (list), `tags`, `paper`.
+
+## Projects & home
+
+- `projects.md`: card grid from `site.data.projects`.
+- `index.html`: home project teasers from same data; link to `/projects/`.
