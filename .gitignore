@@ -1,0 +1,14 @@
+# Jekyll build output
+_site/
+
+# Jekyll / Sass cache
+.jekyll-cache/
+.sass-cache/
+
+# Local bundle install (when using bundle config set path vendor/bundle)
+vendor/bundle/
+
+# OS / editor
+.DS_Store
+*.swp
+*~

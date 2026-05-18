@@ -1,6 +1,7 @@
 plugins:
   - jekyll-seo-tag
-  # - jekyll-sitemap     # 强烈推荐加上，提升 SEO
+  # jekyll-sitemap: run `bundle add jekyll-sitemap` then uncomment:
+  # - jekyll-sitemap
 theme: minima
 
 title: Robin Wu

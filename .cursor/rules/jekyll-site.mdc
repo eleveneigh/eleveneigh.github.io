@@ -20,7 +20,7 @@ alwaysApply: true
 
 ## Style & assets
 
-- Prefer `assets/css/*.css` included from pages; avoid large inline `<style>` blocks in `.md`.
+- Prefer shared styles in `assets/main.scss`; avoid large inline `<style>` blocks in `.md` / `index.html`.
 - Match existing minimal design (CSS variables, cards, centered `.creative-page` max-width).
 - Reuse existing class names (`creative-item`, `creative-list`, `project-card`) before inventing new patterns.
 

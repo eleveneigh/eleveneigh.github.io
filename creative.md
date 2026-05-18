@@ -18,19 +18,18 @@ Beyond research, I explore creativity through various mediums that inform my und
       <p>{{ poem.description }}</p>
       <div class="zine-meta">{{ poem.year }} • {{ poem.category }}</div>
       <p class="creative-link-wrap">
-        <a href="{{ poem.file | relative_url }}" target="_blank" rel="noopener">Open work (PDF)</a>
+        <a href="{{ poem.file | relative_url }}" target="_blank" rel="noopener noreferrer">Open work (PDF)</a>
       </p>
     </article>
     {% endfor %}
   </div>
 {% else %}
   <div class="zine-placeholder">
-    <h4>📝 Poetry</h4>
-    <p>Add your poetry projects here</p>
+    <h4>Poetry</h4>
+    <p>Add your poetry projects in <code>_data/creative.yml</code>.</p>
   </div>
 {% endif %}
 
-<!-- Updated with original PDF images -->
 <h2>Zines</h2>
 
 {% assign zines = site.data.creative.zines %}
@@ -42,19 +41,15 @@ Beyond research, I explore creativity through various mediums that inform my und
     <p>{{ zine.description }}</p>
     <div class="zine-meta">{{ zine.year }} • {{ zine.category }}</div>
     <p class="creative-link-wrap">
-      <a href="{{ zine.pdf | relative_url }}" target="_blank" rel="noopener">Open work (PDF)</a>
+      <a href="{{ zine.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">Open work (PDF)</a>
     </p>
   </article>
   {% endfor %}
   </div>
 {% else %}
   <div class="zine-placeholder">
-    <h4>📚 Zines</h4>
-    <p>Add your zine projects here</p>
+    <h4>Zines</h4>
+    <p>Add zine entries in <code>_data/creative.yml</code>.</p>
   </div>
 {% endif %}
 </div>
-
-<style>
-{% include_relative assets/css/creative.css %}
-</style>
