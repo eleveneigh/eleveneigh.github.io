@@ -4,20 +4,20 @@ plugins:
   # - jekyll-sitemap
 theme: minima
 
-title: Robin Wu
+title: Leyan Wu
 description: HCI researcher designing co-creative systems for reflective making and emotional well-being | Duke Kunshan University
 
 # 【新增】GitHub Pages 必须加这两个，否则链接、SEO、sitemap 都会出问题
 url: "https://eleveneigh.github.io"
 baseurl: ""
 
-author: Robin Wu
+author: Leyan Wu
 
 minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/eleveneigh" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
-    - { platform: email,   user_url: "mailto:robinwu328@gmail.com" }
+    - { platform: email,   user_url: "mailto:lw403@duke.edu" }
     # 可以再加（如果有的话）：
     # - { platform: google_scholar, user_url: "你的 Google Scholar 链接" }
     # - { platform: orcid, user_url: "你的 ORCID" }

@@ -10,13 +10,8 @@ permalink: /contact/
 
     <div class="contact-list">
       <div class="contact-item">
-        <strong>Academic</strong><br>
+        <strong>Email</strong><br>
         <a href="mailto:lw403@duke.edu">lw403@duke.edu</a>
-      </div>
-
-      <div class="contact-item">
-        <strong>Personal</strong><br>
-        <a href="mailto:robinwu328@gmail.com">robinwu328@gmail.com</a>
       </div>
 
       <div class="contact-item">
@@ -34,6 +29,6 @@ permalink: /contact/
   </div>
 
   <div class="contact-image">
-    <img src="{{ '/assets/images/contact-hero.jpg' | relative_url }}" alt="Landscape photograph" width="800" height="400" loading="lazy">
+    <img src="{{ '/assets/images/contact-hero.jpg' | relative_url }}" alt="Leyan Wu" width="731" height="1093" loading="lazy">
   </div>
 </div>

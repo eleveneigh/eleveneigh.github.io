@@ -7,7 +7,7 @@ date: 2025-09-14
 
 # Welcome to My Portfolio! 🎉
 
-Hi, I'm **Robin**! Welcome to my personal website where I share my journey in computer science, research, and creative technology.
+Hi, I'm **Leyan**! Welcome to my personal website where I share my journey in computer science, research, and creative technology.
 
 ## What You'll Find Here
 

@@ -26,5 +26,5 @@ alwaysApply: false
 ## Projects & home
 
 - `projects.md`: Research index grouped by `theme`; cards link to `/research/<slug>/`.
-- `index.html`: vision from `site.data.profile`, flagship project, latest publication teaser, selected research cards.
+- `index.html`: photo, name, and short intro from `site.data.profile`; nav cards link to About, Research, Publications, Practice, Contact.
 - Case study fields in `_data/projects.yml`: `motivation`, `contribution`, `insight`, `reflection`, `theme`, `flagship`, `slug`.

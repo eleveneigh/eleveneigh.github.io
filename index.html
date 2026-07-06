@@ -5,72 +5,44 @@ body_class: home-page
 ---
 
 {% assign profile = site.data.profile %}
-{% assign flagship = site.data.projects | where: "flagship", true | first %}
-{% assign pubs = site.data.publications %}
-{% assign published = pubs | where: "status", "Published" | first %}
 
 <div class="main-content">
-  <section class="hero-vision">
-    <h1>Robin Wu</h1>
-    <p class="vision">{{ profile.vision }}</p>
-    <p class="method">{{ profile.method }}</p>
-    <p class="focus">CS & Applied Math @ Duke Kunshan University</p>
+  <section class="home-hero">
+    <div class="home-hero-photo">
+      <img
+        src="{{ profile.photo | relative_url }}"
+        alt="Leyan Wu"
+        width="731"
+        height="1093"
+        loading="eager"
+      >
+    </div>
+    <div class="home-hero-text">
+      <h1>Leyan Wu</h1>
+      <p class="home-intro">{{ profile.intro }}</p>
+    </div>
   </section>
 
-  {% if flagship %}
-  <section class="flagship-block">
-    <h2 class="section-title">Flagship Research</h2>
-    <article class="flagship-card">
-      <p class="flagship-theme">{{ flagship.theme }}</p>
-      <h3 class="flagship-title">{{ flagship.name }}</h3>
-      <p class="flagship-brief">{{ flagship.brief }}</p>
-      {% if flagship.insight %}
-      <p class="flagship-insight"><strong>Key insight:</strong> {{ flagship.insight }}</p>
-      {% endif %}
-      <p class="flagship-actions">
-        <a class="project-link" href="{{ '/research/' | append: flagship.slug | append: '/' | relative_url }}">Read case study →</a>
-      </p>
-    </article>
-  </section>
-  {% endif %}
-
-  {% if published %}
-  <section class="publications-teaser">
-    <h2 class="section-title">Latest Publication</h2>
-    <p class="publication-teaser-text">
-      <strong>{{ published.title }}</strong> — {{ published.venue }} ({{ published.role }})
-    </p>
-    <p><a class="project-link" href="{{ '/publications/' | relative_url }}">All publications →</a></p>
-  </section>
-  {% endif %}
-
-  <section class="projects">
-    <h2 class="section-title">Selected Research</h2>
-    {% assign items = site.data.projects %}
-    {% for p in items %}
-    <a href="{{ '/research/' | append: p.slug | append: '/' | relative_url }}" class="project-card-link">
-      <div class="project-card">
-        <p class="project-theme">{{ p.theme }}</p>
-        <h3 class="project-title">{{ p.name }}</h3>
-        {% if p.role or p.period %}
-        <p class="project-meta">
-          {% if p.role %}{{ p.role }}{% endif %}{% if p.role and p.period %} · {% endif %}{% if p.period %}{{ p.period }}{% endif %}
-        </p>
-        {% endif %}
-        <p class="project-description">{{ p.brief }}</p>
-        {% if p.tags %}
-        <div class="project-tags">
-          {% for t in p.tags limit: 4 %}<span class="tag">{{ t }}</span>{% endfor %}
-        </div>
-        {% endif %}
-        <div class="project-links">
-          <span class="project-link">Case study</span>
-        </div>
-      </div>
+  <nav class="home-nav" aria-label="Site sections">
+    <a class="home-nav-card" href="{{ '/about/' | relative_url }}">
+      <span class="home-nav-label">About</span>
+      <span class="home-nav-desc">Background, interests, and goals</span>
     </a>
-    {% endfor %}
-    <p class="projects-cta">
-      <a class="project-link" href="{{ '/projects/' | relative_url }}">Browse by theme →</a>
-    </p>
-  </section>
+    <a class="home-nav-card" href="{{ '/projects/' | relative_url }}">
+      <span class="home-nav-label">Research</span>
+      <span class="home-nav-desc">Projects and case studies</span>
+    </a>
+    <a class="home-nav-card" href="{{ '/publications/' | relative_url }}">
+      <span class="home-nav-label">Publications</span>
+      <span class="home-nav-desc">Papers and manuscripts</span>
+    </a>
+    <a class="home-nav-card" href="{{ '/creative/' | relative_url }}">
+      <span class="home-nav-label">Practice</span>
+      <span class="home-nav-desc">Poetry, photography, and zines</span>
+    </a>
+    <a class="home-nav-card" href="{{ '/contact/' | relative_url }}">
+      <span class="home-nav-label">Contact</span>
+      <span class="home-nav-desc">Collaborate or get in touch</span>
+    </a>
+  </nav>
 </div>
