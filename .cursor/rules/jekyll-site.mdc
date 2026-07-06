@@ -16,7 +16,9 @@ alwaysApply: true
 - **Data-driven content**: lists (projects, creative works) live in `_data/*.yml`; pages loop with Liquid (`site.data.projects`, `site.data.creative.*`).
 - **Do not** use `default: []` in Liquid `assign` (breaks on this setup); use `{% assign x = site.data.foo %}` and check `x.size`.
 - **Pages**: front matter with `layout: page` (or `default` for `index.html`), explicit `permalink`, title in English unless user asks otherwise.
-- **Nav**: new top-level pages must appear in `_config.yml` → `header_pages` (e.g. `projects.md`, not `project.md`).
+- **Nav**: `header_pages` in `_config.yml` — Research (`projects.md`), Publications, Practice (`creative.md`, permalink `/creative/`), About, Contact.
+- **Case studies**: `_data/projects.yml` with `slug`; detail pages in `research/` using `layout: project`.
+- **Profile copy**: `_data/profile.yml` (vision, method, interests); publications in `_data/publications.yml`.
 
 ## Style & assets
 

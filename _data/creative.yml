@@ -1,9 +1,15 @@
+framing: >
+  My creative practice is part of my research—not a separate hobby. Working with poetry,
+  photography, and zine-making keeps me close to fragmentation, memory, and materiality:
+  the same questions that drive my HCI work on collage, co-creativity, and emotional reflection.
+
 zines:
   - title: "Fragment of Life"
     description: "A visual journey through moments and memories"
     pdf: "/Fragments Of Life.pdf"
-    category: "photography"
+    category: "poetry"
     year: "2024"
+    research_note: "Explores how fragments of everyday images accumulate into personal narrative—informing my interest in collage as reflective practice."
 
 poems:
   - title: "Poems in Conversation with Photography"
@@ -11,4 +17,4 @@ poems:
     file: "/Leaving.pdf"
     category: "poetry + photography"
     year: "2026"
-
+    research_note: "Pairs text and image to study how meaning emerges in dialogue across modalities—a thread that runs through my multimodal systems work."

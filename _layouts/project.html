@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% assign p = site.data.projects | where: "slug", page.slug | first %}
+
+{% if p %}
+  {% include project-case-study.html project=p %}
+{% else %}
+  <p>Project not found.</p>
+{% endif %}

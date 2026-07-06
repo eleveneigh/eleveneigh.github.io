@@ -1,0 +1,67 @@
+<article class="case-study">
+  <header class="case-study-header">
+    <p class="case-study-theme">{{ include.project.theme }}</p>
+    <h1 class="case-study-title">{{ include.project.name }}</h1>
+    {% if include.project.role or include.project.period %}
+    <p class="case-study-meta">
+      {% if include.project.role %}{{ include.project.role }}{% endif %}{% if include.project.role and include.project.period %} · {% endif %}{% if include.project.period %}{{ include.project.period }}{% endif %}
+    </p>
+    {% endif %}
+    {% if include.project.brief %}
+    <p class="case-study-lede">{{ include.project.brief }}</p>
+    {% endif %}
+  </header>
+
+  {% if include.project.image and include.project.image != "" %}
+  <figure class="case-study-hero">
+    <img src="{{ include.project.image | relative_url }}" alt="{{ include.project.name }}">
+  </figure>
+  {% endif %}
+
+  <section class="case-study-section">
+    <h2>Motivation</h2>
+    <p>{{ include.project.motivation }}</p>
+  </section>
+
+  <section class="case-study-section">
+    <h2>Contribution</h2>
+    <p>{{ include.project.contribution }}</p>
+  </section>
+
+  {% if include.project.highlights and include.project.highlights.size > 0 %}
+  <section class="case-study-section">
+    <h2>Highlights</h2>
+    <ul class="case-study-list">
+      {% for item in include.project.highlights %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="case-study-section">
+    <h2>Key Insight</h2>
+    <p>{{ include.project.insight }}</p>
+  </section>
+
+  <section class="case-study-section">
+    <h2>Reflection</h2>
+    <p>{{ include.project.reflection }}</p>
+  </section>
+
+  {% if include.project.tags and include.project.tags.size > 0 %}
+  <div class="case-study-tags">
+    {% for tag in include.project.tags %}
+    <span class="project-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if include.project.paper %}
+  <p class="case-study-paper"><strong>Publication:</strong> {{ include.project.paper }}</p>
+  {% endif %}
+
+  <p class="case-study-back">
+    <a href="{{ '/projects/' | relative_url }}">← Back to all research</a>
+  </p>
+</article>

@@ -4,19 +4,53 @@ title: Home
 body_class: home-page
 ---
 
-<div class="main-content">
-  <div class="intro">
-    <h1>Robin Wu</h1>
-    <p class="tagline">HCI Researcher exploring AI-assisted creativity and emotional well-being</p>
-    <p class="focus">CS & Applied Math @ Duke Kunshan University</p>
-  </div>
+{% assign profile = site.data.profile %}
+{% assign flagship = site.data.projects | where: "flagship", true | first %}
+{% assign pubs = site.data.publications %}
+{% assign published = pubs | where: "status", "Published" | first %}
 
-  <div class="projects">
-    <h2 class="section-title">Research & Projects</h2>
+<div class="main-content">
+  <section class="hero-vision">
+    <h1>Robin Wu</h1>
+    <p class="vision">{{ profile.vision }}</p>
+    <p class="method">{{ profile.method }}</p>
+    <p class="focus">CS & Applied Math @ Duke Kunshan University</p>
+  </section>
+
+  {% if flagship %}
+  <section class="flagship-block">
+    <h2 class="section-title">Flagship Research</h2>
+    <article class="flagship-card">
+      <p class="flagship-theme">{{ flagship.theme }}</p>
+      <h3 class="flagship-title">{{ flagship.name }}</h3>
+      <p class="flagship-brief">{{ flagship.brief }}</p>
+      {% if flagship.insight %}
+      <p class="flagship-insight"><strong>Key insight:</strong> {{ flagship.insight }}</p>
+      {% endif %}
+      <p class="flagship-actions">
+        <a class="project-link" href="{{ '/research/' | append: flagship.slug | append: '/' | relative_url }}">Read case study →</a>
+      </p>
+    </article>
+  </section>
+  {% endif %}
+
+  {% if published %}
+  <section class="publications-teaser">
+    <h2 class="section-title">Latest Publication</h2>
+    <p class="publication-teaser-text">
+      <strong>{{ published.title }}</strong> — {{ published.venue }} ({{ published.role }})
+    </p>
+    <p><a class="project-link" href="{{ '/publications/' | relative_url }}">All publications →</a></p>
+  </section>
+  {% endif %}
+
+  <section class="projects">
+    <h2 class="section-title">Selected Research</h2>
     {% assign items = site.data.projects %}
-    {% for p in items limit: 3 %}
-    <a href="{{ '/projects/' | relative_url }}" class="project-card-link">
+    {% for p in items %}
+    <a href="{{ '/research/' | append: p.slug | append: '/' | relative_url }}" class="project-card-link">
       <div class="project-card">
+        <p class="project-theme">{{ p.theme }}</p>
         <h3 class="project-title">{{ p.name }}</h3>
         {% if p.role or p.period %}
         <p class="project-meta">
@@ -30,14 +64,13 @@ body_class: home-page
         </div>
         {% endif %}
         <div class="project-links">
-          <a class="project-link" href="{{ '/projects/' | relative_url }}">View details</a>
-          {% if p.paper %}<span class="project-note">Publication listed on project page</span>{% endif %}
+          <span class="project-link">Case study</span>
         </div>
       </div>
     </a>
     {% endfor %}
     <p class="projects-cta">
-      <a class="project-link" href="{{ '/projects/' | relative_url }}">See all projects →</a>
+      <a class="project-link" href="{{ '/projects/' | relative_url }}">Browse by theme →</a>
     </p>
-  </div>
+  </section>
 </div>

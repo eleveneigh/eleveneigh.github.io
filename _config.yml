@@ -5,7 +5,7 @@ plugins:
 theme: minima
 
 title: Robin Wu
-description: HCI Researcher @ Duke Kunshan University | Exploring AI-Assisted Creativity & Emotional Well-being
+description: HCI researcher designing co-creative systems for reflective making and emotional well-being | Duke Kunshan University
 
 # 【新增】GitHub Pages 必须加这两个，否则链接、SEO、sitemap 都会出问题
 url: "https://eleveneigh.github.io"
@@ -25,6 +25,7 @@ minima:
 # 可选：让首页更友好
 header_pages:
   - about.md
-  - projects.md     # 建议改成复数，更符合习惯
+  - projects.md
+  - publications.md
   - creative.md
   - contact.md

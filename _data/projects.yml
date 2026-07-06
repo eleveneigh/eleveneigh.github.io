@@ -1,34 +1,81 @@
-- name: "Juxta: Multimodal AI Co-creative System for Physical Collage"
+- slug: juxta
+  name: "Juxta: Multimodal AI Co-creative System for Physical Collage"
+  theme: "Co-Creative Systems"
+  flagship: true
   role: HII Lab | Duke Kunshan University
   period: Jan - Feb 2026
-  brief: Conceptualized and developed Juxta, a co-creative assistant that operationalizes productive friction through intentional audio-visual incongruence to break cognitive fixation.
+  brief: A co-creative assistant that operationalizes productive friction through intentional audio-visual incongruence to break cognitive fixation during physical collage making.
+  motivation: >
+    Seamless AI assistance can accelerate output but also reinforce creative fixation.
+    Juxta asks whether carefully designed incongruence—between what users see, hear, and
+    expect—can reopen reflective space during embodied making.
+  contribution: >
+    I conceptualized the system, architected the real-time multimodal pipeline, built
+    hands-free speech interaction, and am first author on the manuscript in preparation for ICMI.
+  insight: >
+    Early prototyping suggests that friction is most productive when it remains legible:
+    users need enough semantic grounding to interpret disruption as invitation, not error.
+  reflection: >
+    Next steps include structured user studies on how audio-visual incongruence shapes
+    fixation, reflection, and creative agency across novice and expert makers.
   highlights:
-    - Architected a real-time multimodal pipeline with YOLOv8 for physical canvas sensing
-    - Integrated a local Qwen LLM for semantic matching and reflective dialogue
-    - Built hands-free speech interaction and authored the first-author manuscript for ICMI submission
+    - Real-time pipeline integrating YOLOv8 canvas sensing with a local Qwen LLM
+    - Semantic matching and reflective dialogue during physical collage workflows
+    - Hands-free speech interaction for uninterrupted making
   tags: [Multimodal AI, Co-Creativity, Productive Friction, YOLOv8, Qwen LLM, Speech Interaction]
   paper: First-author paper in preparation for ICMI
+  image: ""
 
-- name: Multi-Modal AI Creative Assistant
+- slug: multimodal-ai-assistant
+  name: Multi-Modal AI Creative Assistant
+  theme: "Co-Creative Systems"
+  flagship: false
   role: Student Research Scholar (SRS) Program | Research Assistant | HII Lab | Duke Kunshan University
   period: May - Aug 2025
-  brief: Engineered a multi-modal AI creative assistant combining vision, language, gesture, and generative media to support real-time co-creative workflows.
+  brief: A multimodal creative assistant combining vision, language, gesture, and generative media to support real-time co-creative workflows.
+  motivation: >
+    Creative support systems often treat sensing, feedback, and interaction as separate layers.
+    This project explores how they can be woven into one continuous co-creative experience.
+  contribution: >
+    I engineered the end-to-end system, directed user research (workshops N=5, usability N=15),
+    led analysis across user and expert groups, and served as co-first author on the manuscript.
+  insight: >
+    User and expert groups diverged in how they interpreted system intelligence—novices sought
+    guidance, while experts treated the system as a collaborative provocateur.
+  reflection: >
+    The project shaped my interest in designing AI that supports reflection rather than
+    optimizing for speed or correctness alone.
   highlights:
-    - Integrated YOLOv8, Grounded-SAM, and Qwen-VL-Plus for real-time scene and material understanding
-    - Built an end-to-end interactive experience with MediaPipe gesture control and Suno plus Qwen Sambert feedback
-    - Directed the full user research lifecycle, including workshops (N=5) and usability testing (N=15)
-    - Performed thematic and statistical analysis, identifying differences between user (N=12) and expert (N=3) groups
-    - Served as co-first author in manuscript writing
+    - Integrated YOLOv8, Grounded-SAM, and Qwen-VL-Plus for scene understanding
+    - MediaPipe gesture control with Suno and Qwen Sambert generative feedback
+    - Full user research lifecycle from workshops to usability testing (N=15)
   tags: [Multi-Modal AI, YOLOv8, Grounded-SAM, Qwen-VL-Plus, MediaPipe, Generative AI, HCI Research]
   paper: Co-first-author paper in preparation
+  image: ""
 
-- name: Co-Designing a Digital Collage Tool for Mental Stress Relief
+- slug: digital-collage-chi
+  name: Co-Designing a Digital Collage Tool for Mental Stress Relief
+  theme: "AI & Well-being"
+  flagship: false
   role: CHI 2025 LBW
   period: Jan - May 2025
-  brief: Investigated how AI shapes creative processes in digital collage and translated qualitative findings into design implications for well-being-focused tools.
+  brief: Co-design research on how AI reshapes digital collage workflows and what that means for stress relief and reflective creative practice.
+  motivation: >
+    AI is rapidly entering creative tools, but we still lack grounded understanding of how
+    it changes the emotional and reflective qualities of making under stress.
+  contribution: >
+    I co-designed the study, conducted workshops and interviews (N=8), performed thematic
+    analysis with ATLAS.ti, and published as second author at CHI EA 2025.
+  insight: >
+    Participants valued AI when it supported interpretation and pacing—not when it replaced
+    the labor of sense-making in collage creation.
+  reflection: >
+    This work anchors my ongoing interest in well-being-focused creative tools and
+    design implications for responsible AI in mental health contexts.
   highlights:
-    - Conducted a co-design workshop and semi-structured interviews with N=8 participants
-    - Performed inductive thematic analysis of interview transcripts using ATLAS.ti
-    - Published findings in CHI EA 2025 as second author
+    - Co-design workshop and semi-structured interviews with N=8 participants
+    - Inductive thematic analysis with ATLAS.ti
+    - Published findings in CHI EA 2025
   tags: [Co-Design, ATLAS.ti, Thematic Analysis, AI Creativity, CHI 2025]
   paper: "Exploring the Impacts of AI Technologies on Digital Collage Creation (CHI EA 2025)"
+  image: ""

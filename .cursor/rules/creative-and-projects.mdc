@@ -25,5 +25,6 @@ alwaysApply: false
 
 ## Projects & home
 
-- `projects.md`: card grid from `site.data.projects`.
-- `index.html`: home project teasers from same data; link to `/projects/`.
+- `projects.md`: Research index grouped by `theme`; cards link to `/research/<slug>/`.
+- `index.html`: vision from `site.data.profile`, flagship project, latest publication teaser, selected research cards.
+- Case study fields in `_data/projects.yml`: `motivation`, `contribution`, `insight`, `reflection`, `theme`, `flagship`, `slug`.

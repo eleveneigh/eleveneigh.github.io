@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Creative
+title: Practice
 permalink: /creative/
 ---
 
 <div class="creative-page">
-Beyond research, I explore creativity through various mediums that inform my understanding of human expression and design.
+<p class="practice-framing">{{ site.data.creative.framing }}</p>
 
 <h2>Poetry</h2>
 
@@ -17,6 +17,9 @@ Beyond research, I explore creativity through various mediums that inform my und
       <h3>{{ poem.title }}</h3>
       <p>{{ poem.description }}</p>
       <div class="zine-meta">{{ poem.year }} • {{ poem.category }}</div>
+      {% if poem.research_note %}
+      <p class="creative-research-note">{{ poem.research_note }}</p>
+      {% endif %}
       <p class="creative-link-wrap">
         <a href="{{ poem.file | relative_url }}" target="_blank" rel="noopener noreferrer">Open work (PDF)</a>
       </p>
@@ -40,6 +43,9 @@ Beyond research, I explore creativity through various mediums that inform my und
     <h3>{{ zine.title }}</h3>
     <p>{{ zine.description }}</p>
     <div class="zine-meta">{{ zine.year }} • {{ zine.category }}</div>
+    {% if zine.research_note %}
+    <p class="creative-research-note">{{ zine.research_note }}</p>
+    {% endif %}
     <p class="creative-link-wrap">
       <a href="{{ zine.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">Open work (PDF)</a>
     </p>

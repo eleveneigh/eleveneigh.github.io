@@ -4,18 +4,32 @@ title: About
 permalink: /about/
 ---
 
-# About
+{% assign profile = site.data.profile %}
 
 I'm a CS & Applied Mathematics student at Duke Kunshan University, researching at the intersection of **Human-Computer Interaction**, **affective computing**, and **AI-assisted creativity**.
 
-## Research Focus
+## Research Vision
 
-My work explores how technology can support emotional well-being and mental health through:
+{{ profile.vision }}
 
-- **Therapeutic AI systems** that understand and respond to human emotions
-- **AI-assisted creative tools** for reflective art-making processes
-- **Interactive design** for mental health applications
+## Research Interests
+
+{% for item in profile.interests %}
+- {{ item }}
+{% endfor %}
+
+## Methods
+
+{% for item in profile.methods %}
+- {{ item }}
+{% endfor %}
 
 ## Goals
 
-I'm working toward a PhD to continue developing human-centered technologies that care about emotional experiences and mental well-being.
+{{ profile.looking_for }}
+
+{% if profile.cv and profile.cv != "" %}
+<p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>
+{% endif %}
+
+<p>Open to research collaborations — <a href="{{ '/contact/' | relative_url }}">get in touch</a>.</p>
