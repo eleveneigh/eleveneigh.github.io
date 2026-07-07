@@ -8,8 +8,8 @@ permalink: /publications/
 
 <div class="publications-page">
   <p class="publications-intro">
-    Selected publications and manuscripts. For collaboration inquiries, see
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>.
+    Selected publications and manuscripts. For collaboration inquiries, email
+    <a href="mailto:lw403@duke.edu">lw403@duke.edu</a>.
   </p>
 
   {% if pubs and pubs.size > 0 %}

@@ -1,0 +1,49 @@
+format: text
+
+motivation: >
+  Digital collage tools often trade away the tactile, embodied qualities that make physical
+  collage-making therapeutically valuable, while existing therapeutic collage systems typically
+  rely on synchronous facilitation by a therapist. Coller asks whether AI can support self-guided,
+  traditional physical collage-making, preserving the cutting, pasting, and material handling that
+  make the medium feel embodied, while still offering therapeutic-oriented scaffolding.
+
+system:
+  image: /assets/research/coller/system-overview.png
+  caption: >
+    Figure 1. Overview of the Coller workflow across three stages, each comprising specific features that guide
+    users through the therapeutic collage-making process. In the pre-creation stage, Coller first provides
+    Meditation (A) followed by Therapeutic Guidance (B). During creation, two features operate in parallel:
+    Sound Trigger (C) and Voice Assistant (D). Finally, in the post-creation stage, Coller offers
+    Reflection Guidance (E) and generates a narrative Soundscape Story (F) to consolidate the therapeutic
+    experience.
+  body: >
+    Co-designed with collage creators and mental-health professionals, Coller supports users across
+    three stages of collage-making. Before creation, a voice-guided Meditation and Thematic Guidance
+    (past/present/future prompts, authored with a collaborating art therapist) help users settle into
+    the activity. During creation, a Sound Trigger plays environmental sounds tied to the visual
+    elements users place (e.g., nature imagery triggers birdsong or rainfall), while a Voice Assistant
+    responds to spoken requests with contextual, emotionally supportive feedback. After creation, a
+    Reflection Guidance dialogue—combining therapist-authored prompts with LLM-generated follow-ups—helps
+    users narrate their collage, closing with a generated Soundscape Story that weaves the session's
+    visual themes and sounds into a short audio narrative.
+
+study_heading: "Study & My Role"
+study: >
+  We conducted an exploratory qualitative study with 12 participants and 3 mental-health
+  professionals, who used Coller and took part in semi-structured interviews. I led the interview
+  analysis, applying the Expressive Therapies Continuum (ETC) as an analytical lens across four
+  dimensions—Kinesthetic/Sensory, Perceptual/Affective, Cognitive/Symbolic, and Creative—and
+  contributed to the manuscript as second author.
+
+insight: >
+  Coller was most salient at the Cognitive/Symbolic level: thematic prompts and reflective dialogue
+  helped users articulate symbolic meaning and personal narrative, while ambient sound shaped sensory
+  and affective engagement underneath it. Participants also read the system's role as
+  stage-sensitive—a guide before creation, a low-interruption companion during creation, and a
+  dialogic partner afterward—suggesting AI support for expressive arts should adapt its role, tone,
+  and level of intervention to both the stage of activity and the user's needs.
+
+reflection: >
+  Working through the ETC lens on this project sharpened how I think about AI's role in emotionally
+  sensitive creative contexts: not as a replacement for material engagement or professional
+  facilitation, but as scaffolding that stays sensitive to what stage the person is in.

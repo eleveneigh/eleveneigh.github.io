@@ -1,0 +1,115 @@
+{% assign p = include.project %}
+{% assign cs = include.case_study %}
+
+<article class="case-study case-study-expanded">
+  <header class="case-study-header">
+    <p class="case-study-theme">{{ p.theme }}</p>
+    <h1 class="case-study-title">{{ p.name }}</h1>
+    {% if p.role or p.period %}
+    <p class="case-study-meta">
+      {% if p.role %}{{ p.role }}{% endif %}{% if p.role and p.period %} · {% endif %}{% if p.period %}{{ p.period }}{% endif %}
+    </p>
+    {% endif %}
+  </header>
+
+  <section class="case-study-hero-block">
+    {% if cs.hero.image and cs.hero.image != "" %}
+    <figure class="case-study-figure case-study-figure-hero">
+      <img src="{{ cs.hero.image | relative_url }}" alt="{{ cs.hero.caption | strip_html }}">
+      {% if cs.hero.caption %}<figcaption>{{ cs.hero.caption }}</figcaption>{% endif %}
+    </figure>
+    {% else %}
+    <figure class="case-study-figure case-study-figure-hero">
+      <div class="figure-placeholder" aria-hidden="true">Figure 1</div>
+      {% if cs.hero.caption %}<figcaption>{{ cs.hero.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    {% if cs.hero.tagline %}
+    <p class="case-study-tagline">{{ cs.hero.tagline }}</p>
+    {% endif %}
+  </section>
+
+  <section class="case-study-section">
+    <h2>Motivation</h2>
+    <p>{{ cs.motivation_opening }}</p>
+    <p class="case-study-section-gap">{{ cs.motivation_bisociation }}</p>
+    {% if cs.motivation_figure.image and cs.motivation_figure.image != "" %}
+    <figure class="case-study-figure case-study-figure-inline">
+      <img src="{{ cs.motivation_figure.image | relative_url }}" alt="{{ cs.motivation_figure.caption | strip_html }}">
+      {% if cs.motivation_figure.caption %}<figcaption>{{ cs.motivation_figure.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    <p class="case-study-section-gap">{{ cs.motivation_rqs }}</p>
+    <p class="case-study-section-gap">{{ cs.motivation_role }}</p>
+  </section>
+
+  <section class="case-study-section">
+    <h2>System</h2>
+    {% if cs.system.image and cs.system.image != "" %}
+    <figure class="case-study-figure">
+      <img src="{{ cs.system.image | relative_url }}" alt="{{ cs.system.caption | strip_html }}">
+      {% if cs.system.caption %}<figcaption>{{ cs.system.caption }}</figcaption>{% endif %}
+    </figure>
+    {% else %}
+    <figure class="case-study-figure">
+      <div class="figure-placeholder" aria-hidden="true">Figure 3</div>
+      {% if cs.system.caption %}<figcaption>{{ cs.system.caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    {% for para in cs.system.body %}
+    <p{% unless forloop.first %} class="case-study-section-gap"{% endunless %}>{{ para }}</p>
+    {% endfor %}
+  </section>
+
+  <section class="case-study-section">
+    <h2>Study</h2>
+    <p>{{ cs.study }}</p>
+  </section>
+
+  <section class="case-study-section">
+    <h2>Findings</h2>
+    <p>{{ cs.findings_quantitative }}</p>
+    {% if cs.findings_qualitative_intro %}
+    <p class="case-study-section-gap">{{ cs.findings_qualitative_intro }}</p>
+    {% endif %}
+
+    {% for ex in cs.examples %}
+    <div class="case-study-example">
+      {% if ex.image and ex.image != "" %}
+      <figure class="case-study-figure case-study-figure-example">
+        <img src="{{ ex.image | relative_url }}" alt="{{ ex.caption | strip_html }}">
+        {% if ex.caption %}<figcaption>{{ ex.caption }}</figcaption>{% endif %}
+      </figure>
+      {% else %}
+      <figure class="case-study-figure case-study-figure-example">
+        <div class="figure-placeholder" aria-hidden="true">{{ ex.id | upcase }}</div>
+        {% if ex.caption %}<figcaption>{{ ex.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+      {% if ex.title %}<h3 class="case-study-example-title">{{ ex.title }}</h3>{% endif %}
+      <p>{{ ex.body }}</p>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="case-study-section">
+    <h2>Why It Matters</h2>
+    <p>{{ cs.why_it_matters }}</p>
+  </section>
+
+  {% if p.tags and p.tags.size > 0 %}
+  <div class="case-study-tags">
+    {% for tag in p.tags %}
+    <span class="project-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if p.paper %}
+  <p class="case-study-paper"><strong>Publication:</strong> {{ p.paper }}</p>
+  {% endif %}
+
+  <p class="case-study-back">
+    <a href="{{ '/projects/' | relative_url }}">← Back to all research</a>
+  </p>
+</article>

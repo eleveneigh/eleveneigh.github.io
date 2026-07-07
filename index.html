@@ -8,6 +8,13 @@ body_class: home-page
 
 <div class="main-content">
   <section class="home-hero">
+    <div class="home-hero-text">
+      <h1>Leyan Wu</h1>
+      <p class="home-tagline">{{ profile.hero }}</p>
+      <p class="home-cta">
+        <a href="{{ '/about/' | relative_url }}">{{ profile.hero_cta }}</a>
+      </p>
+    </div>
     <div class="home-hero-photo">
       <img
         src="{{ profile.photo | relative_url }}"
@@ -17,32 +24,5 @@ body_class: home-page
         loading="eager"
       >
     </div>
-    <div class="home-hero-text">
-      <h1>Leyan Wu</h1>
-      <p class="home-intro">{{ profile.intro }}</p>
-    </div>
   </section>
-
-  <nav class="home-nav" aria-label="Site sections">
-    <a class="home-nav-card" href="{{ '/about/' | relative_url }}">
-      <span class="home-nav-label">About</span>
-      <span class="home-nav-desc">Background, interests, and goals</span>
-    </a>
-    <a class="home-nav-card" href="{{ '/projects/' | relative_url }}">
-      <span class="home-nav-label">Research</span>
-      <span class="home-nav-desc">Projects and case studies</span>
-    </a>
-    <a class="home-nav-card" href="{{ '/publications/' | relative_url }}">
-      <span class="home-nav-label">Publications</span>
-      <span class="home-nav-desc">Papers and manuscripts</span>
-    </a>
-    <a class="home-nav-card" href="{{ '/creative/' | relative_url }}">
-      <span class="home-nav-label">Practice</span>
-      <span class="home-nav-desc">Poetry, photography, and zines</span>
-    </a>
-    <a class="home-nav-card" href="{{ '/contact/' | relative_url }}">
-      <span class="home-nav-label">Contact</span>
-      <span class="home-nav-desc">Collaborate or get in touch</span>
-    </a>
-  </nav>
 </div>

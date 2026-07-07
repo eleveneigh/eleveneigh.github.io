@@ -1,7 +1,12 @@
-intro: >
-  CS & Applied Mathematics student at Duke Kunshan University. I research HCI,
-  AI-assisted creativity, and technology for emotional well-being—designing
-  co-creative systems that support reflective making and human agency.
+hero: >
+  I design co-creative systems that use intentional friction—not seamless automation—to
+  support reflective making, emotional well-being, and human agency in AI-mediated creativity.
+
+hero_cta: About me →
+
+identity: >
+  I'm a CS & Applied Mathematics student at Duke Kunshan University, researching at the intersection of
+  Human-Computer Interaction, affective computing, and AI-assisted creativity.
 
 photo: /assets/images/contact-hero.jpg
 

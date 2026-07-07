@@ -1,0 +1,97 @@
+hero:
+  image: /assets/research/juxta/figure-1.png
+  caption: "Figure 1. Onboarding → in-session interaction → system perspective (a/b/c)."
+  tagline: "What happens when the soundtrack doesn't match the picture?"
+
+motivation_opening: >
+  Most creativity support tools optimize for seamless, semantically aligned multimodal feedback—but
+  that consistency can reinforce cognitive fixation rather than break it. This project asks the
+  inverse question: can deliberately designed mismatch act as productive friction?
+
+motivation_bisociation: >
+  Our stance draws on Arthur Koestler's theory of bisociation. Koestler distinguishes habitual
+  thinking—association within a single, self-consistent matrix of thought—from bisociation: the
+  rarer act of perceiving the same situation simultaneously within two habitually incompatible
+  matrices. Insight arises not from either matrix alone, but from the moment they intersect and are
+  held together. In our system, the ongoing collage-making process forms one matrix of thought (M1);
+  the incongruent sound stimulus introduces a second, independent matrix (M2). When a participant's
+  attention is pulled across both at once, that collision is where a spark of reinterpretation
+  becomes possible.
+
+motivation_figure:
+  image: /assets/research/juxta/bisociation.png
+  caption: "Figure 2. M1/M2 bisociation diagram."
+
+motivation_rqs: >
+  This led to two research questions: how incongruent versus congruent auditory stimuli affect
+  perceived creativity support and cognitive load (RQ1), and how they shape creative and emotional
+  experience during collage making (RQ2).
+
+motivation_role: >
+  I led the system design and the pre-study calibration described below; together with my lab
+  collaborators, we then ran the main study and analysis.
+
+system:
+  image: /assets/research/juxta/figure-2.png
+  caption: "Figure 3. System architecture: overhead sensing, semantic matching, and audio feedback."
+  body:
+    - >
+      The experimental setup pairs an overhead camera with a workstation, collage tools, and physical
+      materials; all inference runs on-device to keep latency low. I fine-tuned a YOLOv8 model to
+      track six predefined collage elements in real time, and each detection triggers a sound—either
+      a semantically matched cue in congruent mode (a wave fragment triggers a wave sound), or a
+      deliberately mismatched one in incongruent mode (a wave fragment triggers a campfire sound).
+    - >
+      To choose which mismatched sounds actually felt meaningful rather than arbitrary, I led a
+      pre-study (N=5): for each visual element, participants rated four candidate sounds on perceived
+      semantic distance and metaphorical interpretability, which we combined with SBERT-computed cosine
+      distances between image and sound labels. The selected pairings clustered in a "sweet spot"
+      (cosine distance 0.72–0.92)—mismatched enough to be noticed, but still interpretable enough to
+      invite reframing rather than confusion.
+
+study: >
+  With this calibrated setup, we ran a within-subjects main study (N=16) comparing congruent vs.
+  incongruent conditions. We measured creativity support (CSI), cognitive load (NASA-TLX), perceived
+  surprisingness (Surprisingness Scale), and expert ratings of collage outcomes to address RQ1, then
+  conducted semi-structured interviews to capture participants' creative and emotional experience (RQ2).
+
+findings_quantitative: >
+  Incongruent feedback significantly increased surprisingness, but we found no significant differences
+  in creativity support, cognitive load, or expert ratings. Rather than a weak result, we read this
+  null pattern as evidence that the friction we designed didn't become a measurable burden—it stayed
+  legible enough to provoke without derailing the making process.
+
+findings_qualitative_intro: >
+  The more compelling story lives in the thematic analysis, which surfaced four themes: sound as an
+  anchor for immersion (both conditions), congruence as a stabilizer vs. incongruence as a catalyst
+  for reinterpretation, congruent audio as emotional reinforcement vs. incongruent audio as an
+  emotional placeholder that lowered self-censorship, and active authorial negotiation across both
+  conditions. Two moments capture this most vividly:
+
+examples:
+  - id: p8
+    image: /assets/research/juxta/figure-8-p8.png
+    caption: "Figure 4. P8's collage created in the incongruent condition."
+    title: "P8 — thematic reframing (incongruent)"
+    body: >
+      The lower half keeps the original work-related symbols (Moka pot, typewriter), but hearing the
+      birdsong triggered by the Moka pot pulled the participant out of her habitual "worker persona,"
+      prompting her to shift the upper half toward a dreamscape of clouds, birds, and abstract blue
+      tones. This shift illustrates de-habituation in action: incongruent sound breaking open a
+      habitual frame just enough to admit a new one.
+
+  - id: p9
+    image: /assets/research/juxta/figure-9-p9.png
+    caption: "Figure 5. P9's collage created in the congruent condition."
+    title: "P9 — agency through resistance (congruent)"
+    body: >
+      The participant responded to perfect audio-visual alignment by physically shredding the matched
+      materials, visually expressing a theme of "tearing down the old system." This reaction shows that
+      participants weren't passively consuming the system's cues—they actively evaluated, and at times
+      resisted, them to preserve their own authorial intent.
+
+why_it_matters: >
+  This project sharpened my research lens on friction as a design material. It also connects forward:
+  if perceptual friction can reshape cognitive state during collage making, might similar principles
+  help people rebuild agency in higher-pressure embodied settings (such as fear during sport climbing)
+  rather than passively accepting AI judgment?

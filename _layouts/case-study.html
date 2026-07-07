@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign p = site.data.projects | where: "slug", page.slug | first %}
+{% assign cs = site.data.case_studies[page.slug] %}
+
+{% if p and cs %}
+  {% if cs.format == "text" %}
+    {% include text-case-study.html project=p case_study=cs %}
+  {% else %}
+    {% include expanded-case-study.html project=p case_study=cs %}
+  {% endif %}
+{% elsif p %}
+  {% include project-case-study.html project=p %}
+{% else %}
+  <p>Project not found.</p>
+{% endif %}

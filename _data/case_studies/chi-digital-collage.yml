@@ -1,0 +1,35 @@
+format: text
+
+hero:
+  image: /assets/research/chi-digital-collage/figure-1-teaser.png
+  caption: "Figure 1. Digital collage artworks created by participants."
+
+motivation: >
+  AI is rapidly entering creative tools, but there's little grounded understanding of how it actually
+  reshapes the collage-making process—not just whether it speeds things up, but how it changes users'
+  sense of creative ownership and emotional engagement.
+
+study: >
+  We conducted a co-design workshop with eight participants, split into two groups, using the digital
+  collage tool FreeMix alongside a curated set of AI techniques (text generation, image generation,
+  image search, background removal, and more) mapped across the four stages of collage-making—selecting,
+  editing, composing, and finalizing. I helped design the workshop protocol and AI tool selection, and
+  facilitated one of the two groups during the session and the subsequent focus group interview. For
+  analysis, two authors—myself included—independently open-coded 30% of the interview data to build a
+  shared codebook, which the first author then applied to the remaining data. I also contributed to the
+  manuscript writing.
+
+insight: >
+  AI meaningfully supported collage-making at multiple stages—generating materials beyond what existing
+  resources offered, easing editing tasks like background removal and segmentation, and occasionally
+  sparking genuine emotional resonance when a suggestion "mirrored" a participant's own life. But
+  participants were just as quick to push back: several worried that AI-driven composition or overly
+  literal text generation could flatten the personal meaning embedded in their arrangement choices. The
+  throughline across both positive and negative accounts was the same—AI was welcomed as a collaborator,
+  but only for as long as it stayed optional and left final authorship with the maker.
+
+reflection: >
+  This was my first empirical HCI study, and it's where I started noticing a pattern I've kept returning
+  to since: people don't just want AI to be capable—they want to stay the author of their own creative
+  and emotional process. That tension between AI assistance and human agency became the throughline
+  connecting this project to my later work on Coller and the ICMI study.

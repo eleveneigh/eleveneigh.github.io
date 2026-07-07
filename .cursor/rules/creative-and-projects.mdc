@@ -26,5 +26,5 @@ alwaysApply: false
 ## Projects & home
 
 - `projects.md`: Research index grouped by `theme`; cards link to `/research/<slug>/`.
-- `index.html`: photo, name, and short intro from `site.data.profile`; nav cards link to About, Research, Publications, Practice, Contact.
+- `index.html`: short hero (`profile.hero` + CTA to About), photo; full background on `about.md`.
 - Case study fields in `_data/projects.yml`: `motivation`, `contribution`, `insight`, `reflection`, `theme`, `flagship`, `slug`.

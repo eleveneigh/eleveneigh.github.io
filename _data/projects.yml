@@ -1,81 +1,87 @@
 - slug: juxta
-  name: "Juxta: Multimodal AI Co-creative System for Physical Collage"
+  name: "Disrupted Harmony: How Visual–Audio Incongruence Influences Creativity in Collage Making"
   theme: "Co-Creative Systems"
   flagship: true
   role: HII Lab | Duke Kunshan University
-  period: Jan - Feb 2026
-  brief: A co-creative assistant that operationalizes productive friction through intentional audio-visual incongruence to break cognitive fixation during physical collage making.
+  period: Jan – July 2026
+  brief: >
+    A physical collage system that uses intentional visual–audio incongruence as productive friction,
+    grounded in Koestler's bisociation, to probe creativity support and authorial agency.
   motivation: >
-    Seamless AI assistance can accelerate output but also reinforce creative fixation.
-    Juxta asks whether carefully designed incongruence—between what users see, hear, and
-    expect—can reopen reflective space during embodied making.
+    Can deliberately designed mismatch—not seamless multimodal alignment—act as productive friction
+    during collage making? RQ1: effects on creativity support and cognitive load; RQ2: creative and
+    emotional experience.
   contribution: >
-    I conceptualized the system, architected the real-time multimodal pipeline, built
-    hands-free speech interaction, and am first author on the manuscript in preparation for ICMI.
+    I led system design, YOLOv8 fine-tuning, and pre-study calibration (SBERT sweet spot 0.72–0.92);
+    with lab collaborators, ran the main study (N=16) and analysis. First author, ICMI 2026.
   insight: >
-    Early prototyping suggests that friction is most productive when it remains legible:
-    users need enough semantic grounding to interpret disruption as invitation, not error.
+    Incongruent feedback raised surprisingness without increasing cognitive load or lowering expert
+    ratings; qualitative themes show de-habituation, reframing, and active authorial negotiation.
   reflection: >
-    Next steps include structured user studies on how audio-visual incongruence shapes
-    fixation, reflection, and creative agency across novice and expert makers.
+    P8's incongruent-triggered dreamscape reframing and P9's shredding of congruent materials
+    illustrate that participants evaluated and resisted system cues—not passive consumption.
   highlights:
-    - Real-time pipeline integrating YOLOv8 canvas sensing with a local Qwen LLM
-    - Semantic matching and reflective dialogue during physical collage workflows
-    - Hands-free speech interaction for uninterrupted making
-  tags: [Multimodal AI, Co-Creativity, Productive Friction, YOLOv8, Qwen LLM, Speech Interaction]
-  paper: First-author paper in preparation for ICMI
+    - On-device YOLOv8 tracking of six collage elements with congruent/incongruent audio feedback
+    - Pre-study (N=5) calibrating sound–image semantic distance via SBERT and participant ratings
+    - Within-subjects main study (N=16) with CSI, NASA-TLX, Surprisingness Scale, and interviews
+  tags: [Multimodal AI, Co-Creativity, Productive Friction, Bisociation, YOLOv8, SBERT]
+  paper: First-author paper, accepted by ICMI 2026
   image: ""
 
-- slug: multimodal-ai-assistant
-  name: Multi-Modal AI Creative Assistant
+- slug: chi-digital-collage
+  name: "Exploring the Impacts of AI Technologies on Digital Collage Creation"
   theme: "Co-Creative Systems"
   flagship: false
-  role: Student Research Scholar (SRS) Program | Research Assistant | HII Lab | Duke Kunshan University
-  period: May - Aug 2025
-  brief: A multimodal creative assistant combining vision, language, gesture, and generative media to support real-time co-creative workflows.
+  role: CHI EA 2025
+  period: Jan – May 2025
+  brief: >
+    A co-design study on how AI techniques reshape digital collage-making—creative ownership, emotional
+    engagement, and when AI support stays welcome vs. oversteps.
   motivation: >
-    Creative support systems often treat sensing, feedback, and interaction as separate layers.
-    This project explores how they can be woven into one continuous co-creative experience.
+    How does AI reshape collage-making beyond speed—changing users' sense of creative ownership and
+    emotional engagement across selecting, editing, composing, and finalizing?
   contribution: >
-    I engineered the end-to-end system, directed user research (workshops N=5, usability N=15),
-    led analysis across user and expert groups, and served as co-first author on the manuscript.
+    Co-designed workshop protocol and AI tool selection; facilitated one of two participant groups;
+    co-built codebook via independent open-coding (30%); contributed to manuscript. Second author, CHI EA 2025.
   insight: >
-    User and expert groups diverged in how they interpreted system intelligence—novices sought
-    guidance, while experts treated the system as a collaborative provocateur.
+    AI was welcomed as collaborator when optional and authorship stayed with the maker—participants
+    pushed back when composition or text generation threatened personal meaning in arrangements.
   reflection: >
-    The project shaped my interest in designing AI that supports reflection rather than
-    optimizing for speed or correctness alone.
+    First empirical HCI study; the tension between AI assistance and human agency connects forward
+    to Coller and the ICMI bisociation work.
   highlights:
-    - Integrated YOLOv8, Grounded-SAM, and Qwen-VL-Plus for scene understanding
-    - MediaPipe gesture control with Suno and Qwen Sambert generative feedback
-    - Full user research lifecycle from workshops to usability testing (N=15)
-  tags: [Multi-Modal AI, YOLOv8, Grounded-SAM, Qwen-VL-Plus, MediaPipe, Generative AI, HCI Research]
-  paper: Co-first-author paper in preparation
+    - Co-design workshop (N=8) with FreeMix and AI tools mapped to four collage stages
+    - Independent open-coding (30%) for shared codebook; thematic analysis with ATLAS.ti
+    - Published at CHI EA 2025
+  tags: [Co-Design, Digital Collage, Generative AI, Thematic Analysis, ATLAS.ti]
+  paper: Second-author paper, CHI EA 2025
   image: ""
 
-- slug: digital-collage-chi
-  name: Co-Designing a Digital Collage Tool for Mental Stress Relief
+- slug: coller
+  name: "Coller: An AI-Assisted Traditional Collage-Making System for Therapeutic-Oriented Support"
   theme: "AI & Well-being"
   flagship: false
-  role: CHI 2025 LBW
-  period: Jan - May 2025
-  brief: Co-design research on how AI reshapes digital collage workflows and what that means for stress relief and reflective creative practice.
+  role: Student Research Scholar (SRS) Program | Research Assistant | HII Lab | Duke Kunshan University
+  period: May - Dec 2025
+  brief: >
+    An AI-assisted system for self-guided physical collage-making that preserves tactile, embodied
+    making while offering therapeutic-oriented scaffolding across before, during, and after creation.
   motivation: >
-    AI is rapidly entering creative tools, but we still lack grounded understanding of how
-    it changes the emotional and reflective qualities of making under stress.
+    Can AI support self-guided traditional physical collage-making—preserving cutting, pasting, and
+    material handling—without replacing therapist facilitation or the medium's embodied qualities?
   contribution: >
-    I co-designed the study, conducted workshops and interviews (N=8), performed thematic
-    analysis with ATLAS.ti, and published as second author at CHI EA 2025.
+    Co-designed Coller with creators and mental-health professionals; led interview analysis using
+    the Expressive Therapies Continuum (ETC). Second author, ACM DIS 2026 Workshop on AI for Therapy.
   insight: >
-    Participants valued AI when it supported interpretation and pacing—not when it replaced
-    the labor of sense-making in collage creation.
+    Coller was most salient at the Cognitive/Symbolic level; participants read the system's role as
+    stage-sensitive—guide before, companion during, dialogic partner after creation.
   reflection: >
-    This work anchors my ongoing interest in well-being-focused creative tools and
-    design implications for responsible AI in mental health contexts.
+    AI in emotionally sensitive creative contexts works best as scaffolding sensitive to activity
+    stage—not as replacement for material engagement or professional facilitation.
   highlights:
-    - Co-design workshop and semi-structured interviews with N=8 participants
-    - Inductive thematic analysis with ATLAS.ti
-    - Published findings in CHI EA 2025
-  tags: [Co-Design, ATLAS.ti, Thematic Analysis, AI Creativity, CHI 2025]
-  paper: "Exploring the Impacts of AI Technologies on Digital Collage Creation (CHI EA 2025)"
+    - Three-stage support: meditation/thematic guidance, sound triggers + voice assistant, reflection + soundscape story
+    - Exploratory study with 12 participants and 3 mental-health professionals
+    - ETC-based analysis across Kinesthetic/Sensory through Creative dimensions
+  tags: [Therapeutic Design, Expressive Therapies Continuum, Human-AI Collaboration, Reflective Dialogue, Generative AI]
+  paper: Second-author paper, ACM DIS 2026 Workshop on AI for Therapy
   image: ""

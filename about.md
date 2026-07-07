@@ -6,7 +6,7 @@ permalink: /about/
 
 {% assign profile = site.data.profile %}
 
-I'm a CS & Applied Mathematics student at Duke Kunshan University, researching at the intersection of **Human-Computer Interaction**, **affective computing**, and **AI-assisted creativity**.
+{{ profile.identity }}
 
 ## Research Vision
 
@@ -32,4 +32,4 @@ I'm a CS & Applied Mathematics student at Duke Kunshan University, researching a
 <p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>
 {% endif %}
 
-<p>Open to research collaborations — <a href="{{ '/contact/' | relative_url }}">get in touch</a>.</p>
+<p>Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
