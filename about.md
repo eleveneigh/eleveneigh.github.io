@@ -6,11 +6,13 @@ permalink: /about/
 
 {% assign profile = site.data.profile %}
 
-{{ profile.identity }}
+<p>{{ profile.identity }}</p>
 
 ## Research Vision
 
-{{ profile.vision }}
+<p>{{ profile.vision }}</p>
+
+<p>{{ profile.vision_note }} → <a href="{{ '/creative/' | relative_url }}">See Practice</a> for some of that earlier work.</p>
 
 ## Research Interests
 
@@ -26,10 +28,22 @@ permalink: /about/
 
 ## Goals
 
-{{ profile.looking_for }}
+<p>{{ profile.looking_for }} Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
 
 {% if profile.cv and profile.cv != "" %}
 <p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>
 {% endif %}
 
-<p>Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
+<hr class="about-divider">
+
+<div class="about-aside">
+  <p class="about-aside-text">{{ profile.wolfgang }}</p>
+  <img
+    class="about-aside-photo"
+    src="{{ profile.wolfgang_photo | relative_url }}"
+    alt="Wolfgang"
+    width="800"
+    height="600"
+    loading="lazy"
+  >
+</div>

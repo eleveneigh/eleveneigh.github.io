@@ -8,11 +8,12 @@ alwaysApply: false
 
 ## Creative page (`creative.md`)
 
-- Section order unless user says otherwise: **Poetry** (cards) → **Zines** (cards).
-- Both sections use the same card pattern: `creative-list` + `creative-item` (title, description, `zine-meta` for year • category, link `Open work (PDF)`).
-- Section headings: use `<h2>Poetry</h2>` / `<h2>Zines</h2>` inside `.creative-page` (Markdown `##` inside a wrapping `<div>` can fail to render).
+- Section order unless user says otherwise: **Film** → **Poetry** (cards) → **Zines** (cards).
+- Film entries: title, role, place/period, photo grid (`film-photo-grid`), synopsis/process, script link.
+- Poetry/Zines use the same card pattern: `creative-list` + `creative-item` (title, description, `zine-meta` for year • category, link `Open work (PDF)`).
+- Section headings: use `<h2>` inside `.creative-page` (Markdown `##` inside a wrapping `<div>` can fail to render).
 - Styles for Creative live in `assets/main.scss` (not a separate `creative.css` include).
-- PDF links: `{{ item.file | relative_url }}` or `{{ zine.pdf | relative_url }}`, `target="_blank" rel="noopener"`.
+- PDF/script links: `{{ item.file | relative_url }}` or `{{ film.script | relative_url }}`, `target="_blank" rel="noopener"`.
 - Do not restore full-viewport horizontal zine carousels unless the user explicitly requests them.
 
 ## Data files (`_data/`)

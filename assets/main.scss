@@ -800,6 +800,37 @@ button:focus-visible,
   margin-bottom: 0;
 }
 
+.film-entry .zine-meta {
+  margin-bottom: 0.25rem;
+}
+
+.film-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0 1.15rem;
+}
+
+.film-photo-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.film-status {
+  color: var(--text-accent);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .film-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .zine-placeholder {
   text-align: center;
   padding: 2rem 1.5rem;
@@ -808,4 +839,48 @@ button:focus-visible,
   border-radius: 10px;
   color: var(--text-secondary);
   background: rgba(247, 250, 252, 0.5);
+}
+
+/* ---- About ---- */
+.about-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0 1.5rem;
+}
+
+.about-aside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 2rem;
+}
+
+.about-aside-text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.about-aside-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .about-aside {
+    gap: 1rem;
+  }
+
+  .about-aside-photo {
+    width: 96px;
+    height: 96px;
+  }
 }

@@ -1,7 +1,32 @@
 framing: >
-  My creative practice is part of my research—not a separate hobby. Working with poetry,
+  My creative practice is part of my research—not a separate hobby. Working with film, poetry,
   photography, and zine-making keeps me close to fragmentation, memory, and materiality:
   the same questions that drive my HCI work on collage, co-creativity, and emotional reflection.
+
+films:
+  - title: "Another Ending of June"
+    role: "Short Film · Director & Assistant Director"
+    place: "Durham, NC"
+    period: "Sep – Dec 2025"
+    status: "Currently in post-production. The stills above are from set; I'll add the film itself once it's cut."
+    synopsis: >
+      Two young women, one summer that won't quite end. Another Ending of June follows them through
+      emotional numbness and quiet existential drift—naturalistic vignettes building toward a dream
+      sequence centered on a house, silently burning. Not destruction so much as a wish: to finally
+      witness catharsis, to watch something transform instead of just persisting.
+    process: >
+      I wrote and directed the film, operated a RED Digital Cinema camera through principal photography,
+      and built its visual language around a handful of recurring motifs—a ticking clock, the ocean,
+      an old tree, candlelight against dark—each one doing quiet work to externalize what the characters
+      can't quite say out loud.
+    script: /assets/practice/another-ending-of-june-script.pdf
+    photos:
+      - /assets/practice/june/01.jpg
+      - /assets/practice/june/02.jpg
+      - /assets/practice/june/03.jpg
+      - /assets/practice/june/04.jpg
+      - /assets/practice/june/05.jpg
+      - /assets/practice/june/06.jpg
 
 zines:
   - title: "Fragment of Life"

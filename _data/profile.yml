@@ -5,18 +5,21 @@ hero: >
 hero_cta: About me →
 
 identity: >
-  I'm a CS & Applied Mathematics student at Duke Kunshan University, researching at the intersection of
-  Human-Computer Interaction, affective computing, and AI-assisted creativity.
+  Before I ran a single user study, I was pointing a RED camera at people who didn't quite know
+  what to do with their hands, and writing poems that refused to resolve cleanly. I'm Leyan (Robin)—a
+  CS & Applied Mathematics student at Duke Kunshan University, now researching Human-Computer
+  Interaction, affective computing, and AI-assisted creativity.
 
 photo: /assets/images/contact-hero.jpg
 
 vision: >
-  I design co-creative systems that use intentional friction—not seamless automation—to
-  support reflective making, emotional well-being, and human agency in AI-mediated creativity.
+  I design co-creative systems that use intentional friction to support reflective making,
+  emotional well-being, and human agency in AI-mediated creativity.
 
-method: >
-  My work combines rapid prototyping, co-design, and mixed-methods user research to
-  translate qualitative insights into interactive systems people can actually use.
+vision_note: >
+  Film and poetry taught me this before research did: meaning tends to show up in the gap between
+  what you planned and what actually happened. My work now asks whether AI-mediated systems can
+  hold that same gap open, instead of smoothing it away.
 
 interests:
   - Co-creative and embodied interaction
@@ -31,5 +34,11 @@ methods:
 looking_for: >
   MS/PhD opportunities in interdisciplinary HCI labs where design, research, and
   creative practice inform one another.
+
+wolfgang: >
+  Outside of labs and film sets, I'm mostly owned by Wolfgang—a former stray who now owns a lot of
+  love (and most of my desk chair).
+
+wolfgang_photo: /assets/images/wolfgang.jpg
 
 cv: ""
