@@ -710,7 +710,7 @@ button:focus-visible,
 
 /* ---- Publications page ---- */
 .publications-page {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -722,26 +722,41 @@ button:focus-visible,
 
 .publications-list {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .publication-item {
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border: none;
+  border-left: 3px solid var(--accent-coral);
   background: var(--bg-card);
-  padding: 1.1rem 1.25rem;
+  padding: 1.25rem;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.publication-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.publication-item p {
+  margin: 0;
 }
 
 .publication-title {
-  margin: 0 0 0.35rem;
-  font-size: 1.05rem;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .publication-authors,
 .publication-venue {
-  margin: 0.25rem 0;
+  margin: 0;
   color: var(--text-secondary);
   font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 .publication-meta {
