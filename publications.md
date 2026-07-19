@@ -11,13 +11,7 @@ permalink: /publications/
   <div class="publications-list">
     {% for pub in pubs %}
     <article class="publication-item">
-      <h2 class="publication-title">
-        {% if pub.link and pub.link != "" %}
-        <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
-        {% else %}
-        {{ pub.title }}
-        {% endif %}
-      </h2>
+      <h2 class="publication-title">{{ pub.title }}</h2>
       <p class="publication-authors">{{ pub.authors }} ({{ pub.role }})</p>
       <p class="publication-venue">{{ pub.venue }} · {{ pub.status }}</p>
       {% if pub.link and pub.link != "" %}

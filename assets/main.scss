@@ -9,10 +9,17 @@
   --text-primary: #2d3748;
   --text-secondary: #718096;
   --text-accent: #4a5568;
+  --accent-coral: #993c1d;
   --border: #e2e8f0;
   --bg-card: #ffffff;
   --bg-main: #fafafa;
   --spacing: 2rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* 全局样式覆盖 */
@@ -52,7 +59,7 @@ html, body {
 }
 
 .site-nav .page-link:hover {
-  color: var(--text-primary);
+  color: var(--accent-coral);
 }
 
 /* 页面容器 */
@@ -130,14 +137,14 @@ html, body {
 
 /* 链接 */
 .post-content a, .page-content a {
-  color: var(--text-primary);
+  color: var(--accent-coral);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 .post-content a:hover, .page-content a:hover {
-  border-bottom-color: var(--text-primary);
+  border-bottom-color: var(--accent-coral);
 }
 
 /* 代码 */
@@ -346,14 +353,14 @@ button:focus-visible,
 
 .home-cta a {
   font-size: 0.95rem;
-  color: var(--text-primary);
+  color: var(--accent-coral);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 .home-cta a:hover {
-  border-bottom-color: var(--text-primary);
+  border-bottom-color: var(--accent-coral);
 }
 
 @media (max-width: 768px) {
@@ -414,10 +421,11 @@ button:focus-visible,
 }
 
 .projects-page .project-card {
-  border: 1px solid var(--border);
+  border: none;
+  border-left: 3px solid var(--accent-coral);
   background: var(--bg-card);
   padding: 1.25rem;
-  border-radius: 10px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -426,6 +434,16 @@ button:focus-visible,
 
 .projects-page .project-card:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 581px) {
+  .projects-page .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-page .projects-grid .project-card:nth-child(2n) {
+    margin-top: 24px;
+  }
 }
 
 .projects-page .project-title {
@@ -513,12 +531,12 @@ button:focus-visible,
 }
 
 .projects-page .project-title a {
-  color: inherit;
+  color: var(--accent-coral);
   text-decoration: none;
 }
 
 .projects-page .project-title a:hover {
-  border-bottom: 1px solid var(--text-primary);
+  border-bottom: 1px solid var(--accent-coral);
 }
 
 /* ---- Case study ---- */
