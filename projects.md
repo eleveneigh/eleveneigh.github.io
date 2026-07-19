@@ -2,6 +2,7 @@
 layout: page
 title: Research
 permalink: /projects/
+body_class: research-page
 ---
 
 {% assign projects = site.data.projects %}

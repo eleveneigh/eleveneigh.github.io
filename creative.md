@@ -2,6 +2,7 @@
 layout: page
 title: Practice
 permalink: /creative/
+body_class: practice-page
 ---
 
 <div class="creative-page">

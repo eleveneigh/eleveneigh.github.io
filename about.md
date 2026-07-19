@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+body_class: about-page
 ---
 
 {% assign profile = site.data.profile %}

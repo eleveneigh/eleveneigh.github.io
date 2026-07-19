@@ -2,6 +2,7 @@
 layout: page
 title: Publications
 permalink: /publications/
+body_class: publications-page
 ---
 
 {% assign pubs = site.data.publications %}
