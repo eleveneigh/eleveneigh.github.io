@@ -11,13 +11,26 @@ permalink: /creative/
 
 {% assign films = site.data.creative.films %}
 {% if films and films.size > 0 %}
-  <div class="creative-list">
+  <div class="creative-list creative-list-paper creative-list-film">
     {% for film in films %}
-    <a class="film-card-link" href="{{ film.url | relative_url }}">
-      <article class="creative-item film-entry film-teaser">
+    <article class="creative-item film-entry film-teaser"{% if film.rotation %} data-paper-tilt style="--paper-tilt: {{ film.rotation }}deg"{% endif %}>
+      <a class="film-card-link" href="{{ film.url | relative_url }}">
         <h3>{{ film.title }}</h3>
+        {% if film.slate %}
+        <div class="film-slate">
+          <div class="film-slate-line">
+            <span>{{ film.title | upcase }}</span>
+            <span>{{ film.slate.roll }}</span>
+          </div>
+          <div class="film-slate-line">
+            <span>{{ film.slate.credits }}</span>
+            <span>{{ film.slate.dates }}</span>
+          </div>
+        </div>
+        {% else %}
         <div class="zine-meta">{{ film.role }}</div>
         <div class="zine-meta">{{ film.place }} · {{ film.period }}</div>
+        {% endif %}
 
         {% if film.photos and film.photos.size > 0 %}
         <div class="film-photo-grid film-photo-grid-teaser" aria-label="Preview stills">
@@ -29,8 +42,8 @@ permalink: /creative/
 
         <p class="film-teaser-blurb">{{ film.synopsis }}</p>
         <p class="creative-link-wrap film-teaser-cta"><span>View stills &amp; script →</span></p>
-      </article>
-    </a>
+      </a>
+    </article>
     {% endfor %}
   </div>
 {% endif %}
@@ -39,9 +52,9 @@ permalink: /creative/
 
 {% assign poems = site.data.creative.poems %}
 {% if poems and poems.size > 0 %}
-  <div class="creative-list">
+  <div class="creative-list creative-list-paper creative-list-poetry">
     {% for poem in poems %}
-    <article class="creative-item">
+    <article class="creative-item"{% if poem.rotation %} data-paper-tilt style="--paper-tilt: {{ poem.rotation }}deg"{% endif %}>
       <h3>{{ poem.title }}</h3>
       <p>{{ poem.description }}</p>
       <div class="zine-meta">{{ poem.year }} • {{ poem.category }}</div>
@@ -65,9 +78,9 @@ permalink: /creative/
 
 {% assign zines = site.data.creative.zines %}
 {% if zines.size > 0 %}
-  <div class="creative-list">
+  <div class="creative-list creative-list-paper creative-list-zines">
   {% for zine in zines %}
-  <article class="creative-item">
+  <article class="creative-item"{% if zine.rotation %} data-paper-tilt style="--paper-tilt: {{ zine.rotation }}deg"{% endif %}>
     <h3>{{ zine.title }}</h3>
     <p>{{ zine.description }}</p>
     <div class="zine-meta">{{ zine.year }} • {{ zine.category }}</div>

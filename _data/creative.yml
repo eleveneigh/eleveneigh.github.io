@@ -6,9 +6,14 @@ framing: >
 films:
   - slug: another-ending-of-june
     title: "Another Ending of June"
+    rotation: -1.2
     role: "Short Film · Director & Assistant Director"
     place: "Durham, NC"
     period: "Sep – Dec 2025"
+    slate:
+      roll: "ROLL 01"
+      credits: "DIR/AD · DURHAM, NC"
+      dates: "SEP–DEC 2025"
     status: "Currently in post-production. The stills above are from set; I'll add the film itself once it's cut."
     synopsis: >
       Two young women, one summer that won't quite end. Another Ending of June follows them through
@@ -31,6 +36,7 @@ films:
 
 zines:
   - title: "Fragment of Life"
+    rotation: -1.8
     description: "A visual journey through moments and memories"
     pdf: "/Fragments Of Life.pdf"
     category: "poetry"
@@ -39,6 +45,7 @@ zines:
 
 poems:
   - title: "Poems in Conversation with Photography"
+    rotation: 1.6
     description: "A poetry work in dialogue with photographic images."
     file: "/Leaving.pdf"
     category: "poetry + photography"

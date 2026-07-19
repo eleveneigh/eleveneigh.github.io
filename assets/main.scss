@@ -14,6 +14,8 @@
   --bg-card: #ffffff;
   --bg-main: #fafafa;
   --spacing: 2rem;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+  --paper-bg: #f7f3ec;
 }
 
 h1, h2, h3 {
@@ -304,6 +306,8 @@ button:focus-visible,
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--spacing);
+  position: relative;
+  padding-bottom: 7rem;
 }
 
 .home-hero {
@@ -363,6 +367,16 @@ button:focus-visible,
   border-bottom-color: var(--accent-coral);
 }
 
+.home-collage-corner {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 150px;
+  height: auto;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .site-nav .trigger {
     text-align: left;
@@ -375,6 +389,12 @@ button:focus-visible,
 
   .home-page .main-content {
     padding: 1rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .home-collage-corner {
+    width: 110px;
+    bottom: 0.25rem;
   }
 
   .home-hero {
@@ -818,6 +838,94 @@ button:focus-visible,
   margin-bottom: 0;
 }
 
+/* ---- Practice: paper collage cards (Film, Poetry, Zines) ---- */
+.creative-list-paper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.creative-list-paper .creative-item {
+  position: relative;
+  border: none;
+  border-radius: 2px;
+  background: var(--paper-bg);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.12);
+  padding: 1.15rem 1.25rem 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creative-list-paper .creative-item::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 16px;
+  width: 60px;
+  height: 20px;
+  background: rgba(153, 60, 29, 0.55);
+  transform: rotate(-8deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.creative-list-paper .creative-item[data-paper-tilt] {
+  transform: rotate(var(--paper-tilt));
+  z-index: 1;
+}
+
+.creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(odd) {
+  transform: rotate(-1.8deg);
+  z-index: 1;
+}
+
+.creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(even) {
+  transform: rotate(1.5deg);
+  margin-top: -12px;
+  z-index: 2;
+}
+
+.creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(n+3) {
+  z-index: 3;
+}
+
+.creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(n+4) {
+  z-index: 4;
+}
+
+.creative-list-paper .creative-item:hover {
+  transform: rotate(0deg);
+  box-shadow: 3px 6px 14px rgba(0, 0, 0, 0.14);
+  z-index: 10;
+}
+
+.creative-list-poetry .creative-item h3 {
+  font-size: 22px;
+}
+
+.creative-list-zines .creative-item h3 {
+  font-size: 19px;
+}
+
+@media (max-width: 768px) {
+  .creative-list-paper .creative-item,
+  .creative-list-paper .creative-item[data-paper-tilt],
+  .creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(odd),
+  .creative-list-paper .creative-item:not([data-paper-tilt]):nth-child(even) {
+    transform: none;
+    margin-top: 0;
+  }
+
+  .creative-list-paper .creative-item:hover {
+    transform: none;
+  }
+
+  .creative-list-paper {
+    gap: 1rem;
+  }
+}
+
 .film-entry .zine-meta {
   margin-bottom: 0.25rem;
 }
@@ -826,17 +934,31 @@ button:focus-visible,
   display: block;
   text-decoration: none;
   color: inherit;
-  border-radius: 10px;
-}
-
-.film-card-link:hover .film-teaser {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: var(--text-secondary);
 }
 
 .film-card-link:focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: 2px;
+}
+
+.film-entry h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.film-slate {
+  margin: 0 0 1rem;
+}
+
+.film-slate-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
 }
 
 .film-teaser-blurb {
@@ -864,10 +986,35 @@ button:focus-visible,
 }
 
 .film-photo-grid-teaser {
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.75rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5rem;
 }
 
-.film-photo-grid img {
+.film-photo-grid.film-photo-grid-teaser img {
+  flex: 0 0 32%;
+  width: 32%;
+  max-width: 32%;
+  min-width: 0;
+  height: auto;
+  border-radius: 0;
+  border: 1px solid var(--text-primary);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  box-sizing: border-box;
+}
+
+.film-photo-grid.film-photo-grid-teaser img:last-child {
+  position: static;
+}
+
+.film-photo-grid:not(.film-photo-grid-teaser) img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -967,6 +1114,21 @@ button:focus-visible,
   .film-photo-grid,
   .film-photo-grid-full {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .film-photo-grid-teaser {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .film-photo-grid.film-photo-grid-teaser img,
+  .film-photo-grid.film-photo-grid-teaser img:last-child {
+    flex: none;
+    width: 100%;
+  }
+
+  .film-photo-grid.film-photo-grid-teaser img:last-child {
+    margin-top: 0.75rem;
   }
 }
 
