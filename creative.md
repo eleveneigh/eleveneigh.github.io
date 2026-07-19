@@ -13,31 +13,24 @@ permalink: /creative/
 {% if films and films.size > 0 %}
   <div class="creative-list">
     {% for film in films %}
-    <article class="creative-item film-entry">
-      <h3>{{ film.title }}</h3>
-      <div class="zine-meta">{{ film.role }}</div>
-      <div class="zine-meta">{{ film.place }} · {{ film.period }}</div>
+    <a class="film-card-link" href="{{ film.url | relative_url }}">
+      <article class="creative-item film-entry film-teaser">
+        <h3>{{ film.title }}</h3>
+        <div class="zine-meta">{{ film.role }}</div>
+        <div class="zine-meta">{{ film.place }} · {{ film.period }}</div>
 
-      {% if film.photos and film.photos.size > 0 %}
-      <div class="film-photo-grid" aria-label="Behind-the-scenes stills">
-        {% for photo in film.photos %}
-        <img src="{{ photo | relative_url }}" alt="Still from {{ film.title }}" loading="lazy">
-        {% endfor %}
-      </div>
-      {% endif %}
+        {% if film.photos and film.photos.size > 0 %}
+        <div class="film-photo-grid film-photo-grid-teaser" aria-label="Preview stills">
+          {% for photo in film.photos limit: 2 %}
+          <img src="{{ photo | relative_url }}" alt="Still from {{ film.title }}" loading="lazy">
+          {% endfor %}
+        </div>
+        {% endif %}
 
-      <p>{{ film.synopsis }}</p>
-      <p>{{ film.process }}</p>
-      {% if film.status %}
-      <p class="film-status">{{ film.status }}</p>
-      {% endif %}
-
-      {% if film.script and film.script != "" %}
-      <p class="creative-link-wrap">
-        <a href="{{ film.script | relative_url }}" target="_blank" rel="noopener noreferrer">Click to view the script</a>
-      </p>
-      {% endif %}
-    </article>
+        <p class="film-teaser-blurb">{{ film.synopsis }}</p>
+        <p class="creative-link-wrap film-teaser-cta"><span>View stills &amp; script →</span></p>
+      </article>
+    </a>
     {% endfor %}
   </div>
 {% endif %}

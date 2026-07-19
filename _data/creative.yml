@@ -4,7 +4,8 @@ framing: >
   the same questions that drive my HCI work on collage, co-creativity, and emotional reflection.
 
 films:
-  - title: "Another Ending of June"
+  - slug: another-ending-of-june
+    title: "Another Ending of June"
     role: "Short Film · Director & Assistant Director"
     place: "Durham, NC"
     period: "Sep – Dec 2025"
@@ -19,7 +20,7 @@ films:
       and built its visual language around a handful of recurring motifs—a ticking clock, the ocean,
       an old tree, candlelight against dark—each one doing quiet work to externalize what the characters
       can't quite say out loud.
-    script: /assets/practice/another-ending-of-june-script.pdf
+    url: /practice/another-ending-of-june/
     photos:
       - /assets/practice/june/01.jpg
       - /assets/practice/june/02.jpg

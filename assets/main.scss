@@ -804,11 +804,49 @@ button:focus-visible,
   margin-bottom: 0.25rem;
 }
 
+.film-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+}
+
+.film-card-link:hover .film-teaser {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--text-secondary);
+}
+
+.film-card-link:focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: 2px;
+}
+
+.film-teaser-blurb {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--text-secondary);
+}
+
+.film-teaser-cta span {
+  color: var(--text-primary);
+  border-bottom: 1px solid transparent;
+}
+
+.film-card-link:hover .film-teaser-cta span {
+  border-bottom-color: var(--text-primary);
+}
+
 .film-photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin: 1rem 0 1.15rem;
+}
+
+.film-photo-grid-teaser {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .film-photo-grid img {
@@ -825,8 +863,91 @@ button:focus-visible,
   font-size: 0.95rem;
 }
 
+.film-detail {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.film-detail-meta {
+  margin: 0 0 0.35rem;
+  color: var(--text-accent);
+  font-size: 0.92rem;
+}
+
+.film-detail > h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.film-script {
+  margin: 1rem 0 2rem;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-card);
+}
+
+.film-script p {
+  margin: 0 0 0.65rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.script-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.script-meta {
+  font-size: 0.9rem;
+  color: var(--text-accent) !important;
+}
+
+.script-slug {
+  margin-top: 1.15rem !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary) !important;
+}
+
+.script-dialogue {
+  padding-left: 1rem;
+}
+
+.script-speaker {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.script-speaker::after {
+  content: ":";
+}
+
+.script-parenthetical,
+.script-subtitle {
+  font-style: italic;
+  color: var(--text-accent) !important;
+}
+
+.script-end {
+  margin-top: 1.25rem !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-primary) !important;
+}
+
+.script-blank {
+  height: 0.5rem;
+}
+
 @media (max-width: 768px) {
-  .film-photo-grid {
+  .film-photo-grid,
+  .film-photo-grid-full {
     grid-template-columns: repeat(2, 1fr);
   }
 }
