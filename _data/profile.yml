@@ -1,43 +1,46 @@
 hero: >
-  I design co-creative systems that use intentional friction—not seamless automation—to
-  support reflective making, emotional well-being, and human agency in AI-mediated creativity.
+  I design co-creative AI systems that use intentional friction to support reflection,
+  emotional well-being, and human agency.
 
 hero_cta: About me →
 
 identity: >
-  Before I ran a single user study, I was pointing a RED camera at people who didn't quite know
-  what to do with their hands, and writing poems that refused to resolve cleanly. I'm Leyan (Robin)—a
-  CS & Applied Mathematics student at Duke Kunshan University, now researching Human-Computer
-  Interaction, affective computing, and AI-assisted creativity.
+  My path into HCI began behind a camera and on the page. Directing films taught me to notice
+  gesture, hesitation, and the meanings people struggle to articulate; writing poetry taught me
+  to stay with ambiguity rather than resolve it too quickly. I'm Leyan (Robin) Wu, a CS and Applied
+  Mathematics student at Duke Kunshan University, where I study how technology shapes creative
+  expression and emotional experience.
 
 photo: /assets/images/contact-hero.jpg
 
 vision: >
-  I design co-creative systems that use intentional friction to support reflective making,
-  emotional well-being, and human agency in AI-mediated creativity.
+  I'm interested in AI systems that do more than make creative work faster or easier. My research
+  explores how intentional friction—moments of mismatch, pause, or resistance—can encourage
+  reflection, open new interpretations, and help people retain authorship.
 
 vision_note: >
-  Film and poetry taught me this before research did: meaning tends to show up in the gap between
-  what you planned and what actually happened. My work now asks whether AI-mediated systems can
-  hold that same gap open, instead of smoothing it away.
+  This perspective grows out of my creative practice. Film and poetry have shown me that meaning
+  often emerges in the distance between intention and outcome. I ask whether interactive systems
+  can preserve that space rather than smoothing it away.
 
 interests:
-  - Co-creative and embodied interaction
-  - Critical and reflective approaches to AI in creative practice
-  - Technology for emotional well-being and mental health
+  - Human–AI co-creativity and embodied interaction
+  - Critical and reflective AI for creative practice
+  - Affective technologies for emotional well-being
 
 methods:
   - Co-design workshops and semi-structured interviews
   - Prototyping with multimodal sensing and generative feedback
-  - Thematic and statistical analysis of user study data
+  - Mixed-methods evaluation through thematic analysis and quantitative measures
 
 looking_for: >
-  MS/PhD opportunities in interdisciplinary HCI labs where design, research, and
-  creative practice inform one another.
+  I'm seeking MS/PhD opportunities in interdisciplinary HCI labs where design research,
+  technical prototyping, and creative practice inform one another. I'm also open to
+  research collaborations.
 
 wolfgang: >
-  Outside of labs and film sets, I'm mostly owned by Wolfgang—a former stray who now owns a lot of
-  love (and most of my desk chair).
+  Outside the lab and film set, I'm usually with Wolfgang—a former stray who has claimed much of my
+  attention, and most of my desk chair.
 
 wolfgang_photo: /assets/images/wolfgang.jpg
 

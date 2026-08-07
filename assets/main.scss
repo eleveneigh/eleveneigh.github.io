@@ -2269,7 +2269,7 @@ img {
 
 .about-lede {
   max-width: 820px;
-  margin: 0 0 2.75rem !important;
+  margin: 0 auto 2.75rem !important;
   color: var(--text-primary) !important;
   font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.12rem, 1.35vw, 1.35rem) !important;
@@ -2296,6 +2296,8 @@ img {
 .about-vision {
   display: block;
   max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .about-vision .editorial-index {
@@ -2307,10 +2309,14 @@ img {
   grid-column: auto;
 }
 
-.about-vision-statement {
-  color: var(--text-primary) !important;
+.about-vision > p:not(.editorial-index) {
   font-family: 'Newsreader', Georgia, serif;
   font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+}
+
+.about-vision-statement {
+  color: var(--text-primary) !important;
 }
 
 .about-two-column {
@@ -2331,6 +2337,9 @@ img {
   margin: 0 !important;
   padding: 0.9rem 0 0.9rem 2.3rem;
   border-top: 1px solid var(--border);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
   counter-increment: note;
 }
 
@@ -2349,6 +2358,13 @@ img {
   padding: 3rem;
   background: rgba(119, 132, 119, 0.09);
   border: 0;
+}
+
+.about-goals > p:not(.editorial-index),
+.about-aside-text {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
 }
 
 .about-aside {
@@ -2381,18 +2397,31 @@ img {
   width: 100%;
 }
 
-.publications-page-inner {
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
+body.publications-page,
+article.publications-page {
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.about-page .post-header,
+.publications-page-inner {
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.about-page .post-header {
+  width: 100%;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .publications-page .post-header {
   width: 100%;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: none;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .publications-list {

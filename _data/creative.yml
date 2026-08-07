@@ -1,18 +1,18 @@
 framing: >
-  My creative practice is part of my research—not a separate hobby. Working with film, poetry,
-  photography, and zine-making keeps me close to fragmentation, memory, and materiality:
-  the same questions that drive my HCI work on collage, co-creativity, and emotional reflection.
+  My creative practice is one way I develop and investigate research questions. Working with film,
+  poetry, photography, and zine-making keeps me close to fragmentation, memory, and materiality—the
+  same concerns that shape my HCI work on collage, co-creativity, and emotional reflection.
 
 films:
   - slug: another-ending-of-june
     title: "Another Ending of June"
     rotation: -1.2
-    role: "Short Film · Director & Assistant Director"
+    role: "Short Film · Writer–Director · Cinematography"
     place: "Durham, NC"
     period: "Sep – Dec 2025"
     slate:
       roll: "ROLL 01"
-      credits: "DIR/AD · DURHAM, NC"
+      credits: "WRITER/DIR · DURHAM, NC"
       dates: "SEP–DEC 2025"
     status: "Currently in post-production. The stills above are from set; I'll add the film itself once it's cut."
     synopsis: >

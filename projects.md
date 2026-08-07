@@ -13,7 +13,7 @@ body_class: research-page
   <div class="projects-intro-grid">
     <p class="editorial-index">FIELD NOTES / 2025—2026</p>
     <p class="projects-intro">
-      I study how AI-mediated creative systems can preserve reflection, emotional depth, and human agency—often by designing friction instead of removing it.
+      I study how AI-mediated creative systems can create space for reflection, emotional depth, and human agency—often by designing friction instead of removing it.
     </p>
   </div>
 

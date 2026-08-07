@@ -38,7 +38,7 @@ body_class: about-page
   <section class="about-section about-goals" aria-labelledby="about-goals-title">
     <p class="editorial-index">04 / NEXT</p>
     <h2 id="about-goals-title">Where this work is going</h2>
-    <p>{{ profile.looking_for }} Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
+    <p>{{ profile.looking_for }} <a href="mailto:lw403@duke.edu">Get in touch →</a></p>
     {% if profile.cv and profile.cv != "" %}<p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>{% endif %}
   </section>
 
