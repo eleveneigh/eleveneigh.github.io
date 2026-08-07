@@ -2261,7 +2261,10 @@ img {
 
 /* About */
 .about-editorial {
+  width: 100%;
   max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .about-lede {
@@ -2375,7 +2378,21 @@ img {
 /* Publications */
 .publications-page,
 .publications-page-inner {
-  max-width: none;
+  width: 100%;
+}
+
+.publications-page-inner {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-page .post-header,
+.publications-page .post-header {
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .publications-list {
