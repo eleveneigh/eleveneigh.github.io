@@ -8,7 +8,10 @@ body_class: practice-page
 <div class="creative-page">
 <p class="practice-framing">{{ site.data.creative.framing }}</p>
 
-<h2>Film</h2>
+<header class="practice-section-heading">
+  <p class="editorial-index">01 / MOVING IMAGE</p>
+  <h2>Film</h2>
+</header>
 
 {% assign films = site.data.creative.films %}
 {% if films and films.size > 0 %}
@@ -49,7 +52,10 @@ body_class: practice-page
   </div>
 {% endif %}
 
-<h2>Poetry</h2>
+<header class="practice-section-heading">
+  <p class="editorial-index">02 / TEXT &amp; IMAGE</p>
+  <h2>Poetry</h2>
+</header>
 
 {% assign poems = site.data.creative.poems %}
 {% if poems and poems.size > 0 %}
@@ -75,7 +81,10 @@ body_class: practice-page
   </div>
 {% endif %}
 
-<h2>Zines</h2>
+<header class="practice-section-heading">
+  <p class="editorial-index">03 / FRAGMENTS</p>
+  <h2>Zines</h2>
+</header>
 
 {% assign zines = site.data.creative.zines %}
 {% if zines.size > 0 %}

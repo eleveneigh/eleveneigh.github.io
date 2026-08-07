@@ -12,6 +12,8 @@
     {% endif %}
   </header>
 
+  {% include case-study-glance.html project=p %}
+
   <section class="case-study-hero-block">
     {% if cs.hero.image and cs.hero.image != "" %}
     <figure class="case-study-figure case-study-figure-hero">

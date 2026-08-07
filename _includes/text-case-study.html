@@ -12,6 +12,8 @@
     {% endif %}
   </header>
 
+  {% include case-study-glance.html project=p %}
+
   {% if cs.hero.image and cs.hero.image != "" %}
   <figure class="case-study-figure case-study-hero-teaser">
     <img src="{{ cs.hero.image | relative_url }}" alt="{{ cs.hero.caption | strip_html }}">

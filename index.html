@@ -5,24 +5,95 @@ body_class: home-page
 ---
 
 {% assign profile = site.data.profile %}
+{% assign projects = site.data.projects %}
+{% assign film = site.data.creative.films | first %}
 
-<div class="main-content">
-  <section class="home-hero">
-    <div class="home-hero-text">
-      <h1>Leyan Wu</h1>
+<div class="home-shell">
+  <section class="home-hero" aria-labelledby="home-title">
+    <div class="home-hero-copy">
+      <p class="editorial-index">00 / RESEARCHER &amp; MAKER</p>
+      <h1 id="home-title">Leyan <em>Wu</em></h1>
       <p class="home-tagline">{{ profile.hero }}</p>
-      <p class="home-cta">
-        <a href="{{ '/about/' | relative_url }}">{{ profile.hero_cta }}</a>
-      </p>
+      <div class="home-actions">
+        <a class="button-link button-link-primary" href="{{ '/projects/' | relative_url }}">Explore research <span>→</span></a>
+        <a class="button-link" href="{{ '/about/' | relative_url }}">About me <span>→</span></a>
+      </div>
     </div>
-    <div class="home-hero-photo">
-      <img
-        src="{{ profile.photo | relative_url }}"
-        alt="Leyan Wu"
-        width="731"
-        height="1093"
-        loading="eager"
-      >
+
+    <figure class="home-portrait">
+      <div class="home-portrait-frame">
+        <img
+          src="{{ profile.photo | relative_url }}"
+          alt="Leyan Wu standing beside the coast"
+          width="731"
+          height="1093"
+          loading="eager"
+        >
+      </div>
+      <figcaption><span>Portrait / 2026</span><span>DKU · HCI</span></figcaption>
+    </figure>
+
+    <p class="home-margin-note">Designing with friction,<br>not around it.</p>
+  </section>
+
+  <section class="home-section home-research" aria-labelledby="selected-research-title">
+    <header class="section-heading-row">
+      <div>
+        <p class="editorial-index">01 / SELECTED RESEARCH</p>
+        <h2 id="selected-research-title">Systems for reflection, agency, and making.</h2>
+      </div>
+      <a class="section-link" href="{{ '/projects/' | relative_url }}">All research →</a>
+    </header>
+
+    <div class="home-project-grid">
+      {% for p in projects %}
+      <article class="home-project-card{% if p.flagship %} is-featured{% endif %}">
+        <a class="home-project-image" href="{{ '/research/' | append: p.slug | append: '/' | relative_url }}" aria-label="Read {{ p.name }} case study">
+          <img src="{{ p.image | relative_url }}" alt="" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+          <span class="project-number">0{{ forloop.index }}</span>
+        </a>
+        <div class="home-project-copy">
+          <p class="project-meta">{{ p.theme }} · {{ p.period }}</p>
+          <h3><a href="{{ '/research/' | append: p.slug | append: '/' | relative_url }}">{{ p.name }}</a></h3>
+          <p>{{ p.brief }}</p>
+          <a class="text-arrow" href="{{ '/research/' | append: p.slug | append: '/' | relative_url }}">Read case study <span>→</span></a>
+        </div>
+      </article>
+      {% endfor %}
     </div>
+  </section>
+
+  <section class="home-bridge" aria-labelledby="bridge-title">
+    <p class="editorial-index">02 / RESEARCH ↔ PRACTICE</p>
+    <div class="home-bridge-grid">
+      <h2 id="bridge-title">Creative practice is where the research questions begin.</h2>
+      <div>
+        <p>{{ site.data.creative.framing }}</p>
+        <a class="text-arrow" href="{{ '/creative/' | relative_url }}">Enter the practice archive <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  {% if film %}
+  <section class="home-practice" aria-labelledby="practice-preview-title">
+    <div class="practice-preview-images" aria-hidden="true">
+      {% for photo in film.photos limit: 2 %}
+      <img src="{{ photo | relative_url }}" alt="" loading="lazy">
+      {% endfor %}
+    </div>
+    <div class="practice-preview-copy">
+      <p class="editorial-index">03 / CURRENT PRACTICE</p>
+      <p class="practice-preview-type">Short film · {{ film.period }}</p>
+      <h2 id="practice-preview-title">{{ film.title }}</h2>
+      <p>{{ film.synopsis }}</p>
+      <a class="button-link button-link-light" href="{{ film.url | relative_url }}">View stills &amp; script <span>→</span></a>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="home-contact-note" aria-labelledby="contact-title">
+    <p class="editorial-index">04 / NEXT</p>
+    <h2 id="contact-title">Looking for interdisciplinary HCI communities where design, research, and creative practice inform one another.</h2>
+    <a href="mailto:lw403@duke.edu">Start a conversation →</a>
   </section>
 </div>

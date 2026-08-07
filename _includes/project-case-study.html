@@ -12,6 +12,8 @@
     {% endif %}
   </header>
 
+  {% include case-study-glance.html project=include.project %}
+
   {% if include.project.image and include.project.image != "" %}
   <figure class="case-study-hero">
     <img src="{{ include.project.image | relative_url }}" alt="{{ include.project.name }}">

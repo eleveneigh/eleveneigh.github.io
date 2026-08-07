@@ -26,7 +26,7 @@
     - Within-subjects main study (N=16) with CSI, NASA-TLX, Surprisingness Scale, and interviews
   tags: [Multimodal AI, Co-Creativity, Productive Friction, Bisociation, YOLOv8, SBERT]
   paper: First-author paper, accepted by ICMI 2026
-  image: ""
+  image: /assets/research/juxta/figure-1.png
 
 - slug: chi-digital-collage
   name: "Exploring the Impacts of AI Technologies on Digital Collage Creation"
@@ -55,7 +55,7 @@
     - Published at CHI EA 2025
   tags: [Co-Design, Digital Collage, Generative AI, Thematic Analysis, ATLAS.ti]
   paper: Second-author paper, CHI EA 2025
-  image: ""
+  image: /assets/research/chi-digital-collage/figure-1-teaser.png
 
 - slug: coller
   name: "Coller: An AI-Assisted Traditional Collage-Making System for Therapeutic-Oriented Support"
@@ -84,4 +84,4 @@
     - ETC-based analysis across Kinesthetic/Sensory through Creative dimensions
   tags: [Therapeutic Design, Expressive Therapies Continuum, Human-AI Collaboration, Reflective Dialogue, Generative AI]
   paper: Second-author paper, ACM DIS 2026 Workshop on AI for Therapy
-  image: ""
+  image: /assets/research/coller/system-overview.png

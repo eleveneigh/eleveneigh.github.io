@@ -1,0 +1,34 @@
+{% assign p = include.project %}
+<aside class="case-study-glance" aria-label="Project at a glance">
+  <p class="case-study-glance-title">At a glance</p>
+  <dl>
+    {% if p.role %}
+    <div>
+      <dt>Context</dt>
+      <dd>{{ p.role }}</dd>
+    </div>
+    {% endif %}
+    {% if p.period %}
+    <div>
+      <dt>Period</dt>
+      <dd>{{ p.period }}</dd>
+    </div>
+    {% endif %}
+    {% if p.highlights and p.highlights.size > 0 %}
+    <div class="case-study-glance-wide">
+      <dt>Methods &amp; study</dt>
+      <dd>
+        <ul>
+          {% for item in p.highlights limit: 2 %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </dd>
+    </div>
+    {% endif %}
+    {% if p.paper %}
+    <div>
+      <dt>Publication</dt>
+      <dd>{{ p.paper }}</dd>
+    </div>
+    {% endif %}
+  </dl>
+</aside>

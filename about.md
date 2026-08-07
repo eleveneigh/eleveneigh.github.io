@@ -7,44 +7,53 @@ body_class: about-page
 
 {% assign profile = site.data.profile %}
 
-<p>{{ profile.identity }}</p>
+<div class="about-editorial">
+  <p class="about-lede">{{ profile.identity }}</p>
 
-## Research Vision
+  <section class="about-section about-vision" aria-labelledby="about-vision-title">
+    <p class="editorial-index">01 / RESEARCH VISION</p>
+    <h2 id="about-vision-title">Designing space for reflection.</h2>
+    <p class="about-vision-statement">{{ profile.vision }}</p>
+    <p>{{ profile.vision_note }} → <a href="{{ '/creative/' | relative_url }}">See Practice</a> for some of that earlier work.</p>
+  </section>
 
-<p>{{ profile.vision }}</p>
+  <div class="about-two-column">
+    <section class="about-section" aria-labelledby="about-interests-title">
+      <p class="editorial-index">02 / INTERESTS</p>
+      <h2 id="about-interests-title">Questions I return to</h2>
+      <ol class="numbered-notes">
+        {% for item in profile.interests %}<li>{{ item }}</li>{% endfor %}
+      </ol>
+    </section>
 
-<p>{{ profile.vision_note }} → <a href="{{ '/creative/' | relative_url }}">See Practice</a> for some of that earlier work.</p>
+    <section class="about-section" aria-labelledby="about-methods-title">
+      <p class="editorial-index">03 / METHODS</p>
+      <h2 id="about-methods-title">How I work</h2>
+      <ol class="numbered-notes">
+        {% for item in profile.methods %}<li>{{ item }}</li>{% endfor %}
+      </ol>
+    </section>
+  </div>
 
-## Research Interests
+  <section class="about-section about-goals" aria-labelledby="about-goals-title">
+    <p class="editorial-index">04 / NEXT</p>
+    <h2 id="about-goals-title">Where this work is going</h2>
+    <p>{{ profile.looking_for }} Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
+    {% if profile.cv and profile.cv != "" %}<p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>{% endif %}
+  </section>
 
-{% for item in profile.interests %}
-- {{ item }}
-{% endfor %}
-
-## Methods
-
-{% for item in profile.methods %}
-- {{ item }}
-{% endfor %}
-
-## Goals
-
-<p>{{ profile.looking_for }} Open to research collaborations — <a href="mailto:lw403@duke.edu">get in touch</a>.</p>
-
-{% if profile.cv and profile.cv != "" %}
-<p><a href="{{ profile.cv | relative_url }}">Download CV (PDF)</a></p>
-{% endif %}
-
-<hr class="about-divider">
-
-<div class="about-aside">
-  <p class="about-aside-text">{{ profile.wolfgang }}</p>
-  <img
-    class="about-aside-photo"
-    src="{{ profile.wolfgang_photo | relative_url }}"
-    alt="Wolfgang"
-    width="800"
-    height="600"
-    loading="lazy"
-  >
+  <aside class="about-aside">
+    <div>
+      <p class="editorial-index">MARGINALIA / WOLFGANG</p>
+      <p class="about-aside-text">{{ profile.wolfgang }}</p>
+    </div>
+    <img
+      class="about-aside-photo"
+      src="{{ profile.wolfgang_photo | relative_url }}"
+      alt="Wolfgang"
+      width="800"
+      height="600"
+      loading="lazy"
+    >
+  </aside>
 </div>
