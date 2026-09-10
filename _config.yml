@@ -8,14 +8,14 @@ title: Leyan Wu
 description: Duke Kunshan University
 
 # 【新增】GitHub Pages 必须加这两个，否则链接、SEO、sitemap 都会出问题
-url: "https://eleveneigh.github.io"
+url: "https://leyan-wu.github.io"
 baseurl: ""
 
 author: Leyan Wu
 
 minima:
   social_links:
-    - { platform: github,  user_url: "https://github.com/eleveneigh" }
+    - { platform: github,  user_url: "https://github.com/leyan-wu" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/leyan-wu-36398b31a" }
     - { platform: email,   user_url: "mailto:lw403@duke.edu" }
     # 可以再加（如果有的话）：
